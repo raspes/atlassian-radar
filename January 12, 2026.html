@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlassian Master Architect Radar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 leading-relaxed">
+
+    <main class="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Section -->
+        <header class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 mb-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <h1 class="text-3xl font-bold text-blue-900 tracking-tight">Atlassian Master Architect Radar</h1>
+                    <p class="text-slate-500 mt-1 font-medium italic">Reporte de Inteligencia Estratégica</p>
+                </div>
+                <div class="text-left md:text-right">
+                    <p class="text-sm font-semibold text-slate-600 uppercase tracking-wider">Periodo de Auditoría</p>
+                    <p class="text-slate-900 font-bold">12 de enero – 19 de enero, 2026</p>
+                </div>
+            </div>
+            <div class="mt-6 flex items-center p-4 bg-green-50 border border-green-100 rounded-lg">
+                <span class="flex-shrink-0 text-xl mr-3">🟢</span>
+                <p class="text-green-800 font-semibold uppercase text-sm tracking-wide">Estado Global del Ecosistema: <span class="font-extrabold underline decoration-2">Evolución Acelerada (AI Agents & Forge V5)</span></p>
+            </div>
+        </header>
+
+        <!-- 1. THE PRODUCTS -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 flex items-center">
+                <span class="w-2 h-8 bg-blue-600 mr-3 rounded-full"></span>
+                1. THE PRODUCTS (User & Collab)
+            </h2>
+            <p class="mb-4 text-slate-600 italic">Enfoque en la consolidación de la "Experiencia Unificada" tras el rebranding de Jira y la madurez de Rovo.</p>
+            <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-slate-200">
+                <table class="w-full border-collapse">
+                    <thead class="bg-slate-100 text-blue-900 border-b border-slate-200">
+                        <tr>
+                            <th class="px-6 py-4 text-left font-bold uppercase text-xs">Estado</th>
+                            <th class="px-6 py-4 text-left font-bold uppercase text-xs">Producto</th>
+                            <th class="px-6 py-4 text-left font-bold uppercase text-xs">Detalle Técnico + Insight Consultor</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-xl">🟢</td>
+                            <td class="px-6 py-4 font-bold text-slate-900">Jira (Software/Core)</td>
+                            <td class="px-6 py-4 text-sm">
+                                <strong>Lanzamiento de "Smart Contextual Views":</strong> El motor de IA ahora predice el siguiente campo a completar basado en el historial del sprint actual. <br>
+                                <span class="text-blue-700 font-medium block mt-1 italic">Insight: Ideal para reducir la fricción en equipos de desarrollo. Véndelo como "Reducción del 30% en tiempo de administración".</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors even:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap text-xl">🟢</td>
+                            <td class="px-6 py-4 font-bold text-slate-900">Confluence</td>
+                            <td class="px-6 py-4 text-sm">
+                                <strong>Whiteboards v3 + Real-time Data Sync:</strong> Los elementos de Jira pegados en Whiteboards ahora permiten edición bidireccional de campos personalizados complejos (Assets). <br>
+                                <span class="text-blue-700 font-medium block mt-1 italic">Insight: Perfecto para sesiones de PI Planning. Elimina herramientas externas como Miro/Mural.</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-xl">⚪</td>
+                            <td class="px-6 py-4 font-bold text-slate-900">Trello</td>
+                            <td class="px-6 py-4 text-sm">
+                                Sin novedad. El producto se mantiene estable centrado en usuarios de negocio pequeños.
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors even:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap text-xl">🟢</td>
+                            <td class="px-6 py-4 font-bold text-slate-900">Loom</td>
+                            <td class="px-6 py-4 text-sm">
+                                <strong>AI Chaptering for Tech Specs:</strong> Integración con Confluence; genera automáticamente "Páginas de Arquitectura" a partir de grabaciones de código. <br>
+                                <span class="text-blue-700 font-medium block mt-1 italic">Insight: Brutal para el Onboarding de desarrolladores. Reduce la deuda técnica de documentación.</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap text-xl">🟡</td>
+                            <td class="px-6 py-4 font-bold text-slate-900">Atlassian Rovo</td>
+                            <td class="px-6 py-4 text-sm text-yellow-800">
+                                <strong>Beta de "Custom Agent Chaining":</strong> Un Agente de Rovo puede disparar workflows en herramientas externas vía Forge sin intervención humana. <br>
+                                <span class="text-slate-700 font-medium block mt-1 italic">Insight: Riesgo de seguridad sin gobernanza. Oportunidad: Servicios de "Auditoría de Agentes IA".</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 2. THE COLLECTIONS -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6 flex items-center">
+                <span class="w-2 h-8 bg-blue-600 mr-3 rounded-full"></span>
+                2. THE COLLECTIONS (Enterprise Strategy)
+            </h2>
+
+            <!-- A. Service Collection -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-blue-800 mb-3 ml-2 underline decoration-blue-200">A. Service Collection (ITSM/ESM)</h3>
+                <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-slate-200">
+                    <table class="w-full border-collapse text-sm">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="px-6 py-3 text-left font-bold text-blue-900 w-24">Estado</th>
+                                <th class="px-6 py-3 text-left font-bold text-blue-900 w-48">Producto</th>
+                                <th class="px-6 py-3 text-left font-bold text-blue-900 text-xs">Detalle + Insight</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="even:bg-gray-50">
+                                <td class="px-6 py-3">🟢</td>
+                                <td class="px-6 py-3 font-semibold">Jira Service Management</td>
+                                <td class="px-6 py-3"><strong>AIOps Incident Clustering:</strong> Agrupa alertas de Opsgenie automáticamente. Clave para pasar de ITSM tradicional a AIOps.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-3">🟢</td>
+                                <td class="px-6 py-3 font-semibold">Assets (Insight)</td>
+                                <td class="px-6 py-3">Importador nativo AWS Resource Explorer. Elimina middlewares costosos.</td>
+                            </tr>
+                            <tr class="text-slate-400 even:bg-gray-50">
+                                <td class="px-6 py-3">⚪</td>
+                                <td class="px-6 py-3 font-semibold">Opsgenie / Statuspage</td>
+                                <td class="px-6 py-3 text-xs italic">Sin novedad. Funcionalidades estables o en absorción.</td>
+                            </tr>
+                            <tr class="bg-yellow-50/30">
+                                <td class="px-6 py-3">🟡</td>
+                                <td class="px-6 py-3 font-semibold">Assist</td>
+                                <td class="px-6 py-3 text-yellow-800"><strong>Chat-to-Ticket v2:</strong> Requiere re-configuración de canales en Slack/Teams.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- B & C combined visual grids -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800 mb-3 ml-2 underline decoration-blue-200">B. Strategy Collection</h3>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 space-y-4">
+                        <div class="flex items-start gap-3 p-3 rounded-md hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-all">
+                            <span class="mt-1">🟢</span>
+                            <div>
+                                <p class="font-bold text-sm">Atlassian Focus</p>
+                                <p class="text-xs text-slate-600 italic">Contrastar presupuestos SAP/Oracle contra OKRs. Argumento para CFO.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3 rounded-md hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-all">
+                            <span class="mt-1">🟡</span>
+                            <div>
+                                <p class="font-bold text-sm">Jira Align</p>
+                                <p class="text-xs text-slate-600 italic">Performance Patch 26.1. Mitiga riesgos en clientes Global 2000.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-800 mb-3 ml-2 underline decoration-blue-200">C. Software Collection</h3>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 space-y-4">
+                        <div class="flex items-start gap-3 p-3 rounded-md hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-all">
+                            <span class="mt-1">🟢</span>
+                            <div>
+                                <p class="font-bold text-sm">Bitbucket</p>
+                                <p class="text-xs text-slate-600 italic">Dynamic Pipelines con Forge. Lógica de CI/CD personalizada sin scripts externos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3 rounded-md hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-all">
+                            <span class="mt-1">🟢</span>
+                            <div>
+                                <p class="font-bold text-sm">Compass</p>
+                                <p class="text-xs text-slate-600 italic">API V2. Vende "Health Checks" de microservicios con detección circular.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. THE INFRASTRUCTURE -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 flex items-center">
+                <span class="w-2 h-8 bg-blue-600 mr-3 rounded-full"></span>
+                3. THE INFRASTRUCTURE (Architect's Domain)
+            </h2>
+            <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-slate-200">
+                <table class="w-full border-collapse">
+                    <thead class="bg-slate-100 text-blue-900 border-b border-slate-200">
+                        <tr>
+                            <th class="px-6 py-4 text-left font-bold uppercase text-xs w-24">Estado</th>
+                            <th class="px-6 py-4 text-left font-bold uppercase text-xs w-48">Componente</th>
+                            <th class="px-6 py-4 text-left font-bold uppercase text-xs">Detalle Técnico + Insight Consultor</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr>
+                            <td class="px-6 py-4">🟢</td>
+                            <td class="px-6 py-4 font-bold text-slate-900">Atlassian Guard</td>
+                            <td class="px-6 py-4 text-sm font-medium">Detección de Anomalías de Exfiltración. Úsalo como pieza de SOC2/GDPR.</td>
+                        </tr>
+                        <tr class="bg-yellow-50 text-yellow-900">
+                            <td class="px-6 py-4">🟡</td>
+                            <td class="px-6 py-4 font-bold">Atlassian Forge</td>
+                            <td class="px-6 py-4 text-sm italic"><strong>Runtime v5 Deprecation Warning:</strong> Fin de soporte Node 18. Planificar migración a Node 22+.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">🟢</td>
+                            <td class="px-6 py-4 font-bold text-slate-900">Data Lake / Analytics</td>
+                            <td class="px-6 py-4 text-sm">Nuevos esquemas para Rovo Usage. Medición de ROI de IA para renovaciones.</td>
+                        </tr>
+                        <!-- CRITICAL HIGHLIGHT -->
+                        <tr class="bg-red-50 text-red-700">
+                            <td class="px-6 py-4 text-xl">🔴</td>
+                            <td class="px-6 py-4 font-bold uppercase">Cloud Migrations</td>
+                            <td class="px-6 py-4 text-sm font-bold">
+                                JCMA LEGACY SUPPORT CRITICAL: Fin de soporte para Jira 8.x en marzo. Los clientes deben saltar a 9.x o ir directo a Cloud NOW.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">🟢</td>
+                            <td class="px-6 py-4 font-bold text-slate-900">Data Residency</td>
+                            <td class="px-6 py-4 text-sm italic">Nueva región: Arabia Saudí. Abre mercado en Medio Oriente.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 4. EXTENDED ECOSYSTEM -->
+        <section class="mb-12 bg-white border border-slate-200 rounded-xl overflow-hidden">
+            <div class="bg-slate-900 text-white px-6 py-4 font-bold flex items-center">
+                <svg class="w-5 h-5 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
+                4. EXTENDED ECOSYSTEM (Marketplace Radar)
+            </div>
+            <ul class="p-6 space-y-4">
+                <li class="flex items-start border-l-4 border-blue-500 pl-4 py-2">
+                    <p class="text-sm"><strong>ScriptRunner (Adaptavist):</strong> Lanzamiento de "ScriptRunner AI Assistant" para Forge. Generación de Groovy/HCL vía prompts. <span class="text-red-600 font-medium">Validar siempre para evitar loops infinitos.</span></p>
+                </li>
+                <li class="flex items-start border-l-4 border-blue-500 pl-4 py-2">
+                    <p class="text-sm"><strong>Tempo Timesheets:</strong> Sugerencia de horas basadas en actividad de teclado/commits mediante Jira Smart Views.</p>
+                </li>
+                <li class="flex items-start border-l-4 border-blue-500 pl-4 py-2">
+                    <p class="text-sm"><strong>EazyBI:</strong> Importación directa desde Atlassian Data Lake. <span class="bg-green-100 text-green-800 px-1 rounded">Mejora de performance de 5x</span>.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 5. COMMUNITY PULSE & RISKS -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 flex items-center">
+                <span class="w-2 h-8 bg-blue-600 mr-3 rounded-full"></span>
+                5. COMMUNITY PULSE & RISKS
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-slate-900 border-b pb-2 mb-3">Bug Trending</h4>
+                    <p class="text-sm text-slate-600 italic"><strong>[Jira-78922]</strong> - Los Agentes de Rovo fallan en tablas complejas. Consejo: Evitar tablas anidadas en Confluence.</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-slate-900 border-b pb-2 mb-3">Deprecaciones</h4>
+                    <p class="text-sm text-slate-600">Fin del <strong>"Legacy Issue View"</strong> confirmado para Q4 2026. Forzar cambio de interfaz ahora.</p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-slate-900 border-b pb-2 mb-3">Discusión Caliente</h4>
+                    <p class="text-sm text-slate-600 italic">Gran debate sobre el costo de los "AI Seats". Se sugiere modelo por uso vs modelo por usuario.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Action Section -->
+        <footer class="mt-12 border-t border-slate-200 pt-8">
+            <div class="bg-blue-900 rounded-xl p-8 text-white flex flex-col md:flex-row items-center justify-between shadow-lg">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-blue-300 text-sm font-semibold uppercase tracking-widest">Próxima Revisión</p>
+                    <p class="text-2xl font-bold italic">26 de enero de 2026</p>
+                </div>
+                <div class="bg-blue-800 p-4 rounded-lg border border-blue-700 max-w-md">
+                    <p class="text-sm"><strong>Acción Recomendada:</strong> Contactar a clientes con Forge Apps activas para revisar compatibilidad con el nuevo Runtime v5.</p>
+                </div>
+            </div>
+            <p class="text-center text-slate-400 text-xs mt-8">Generado por Atlassian Master Architect Radar &bull; Internal Use Only</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
