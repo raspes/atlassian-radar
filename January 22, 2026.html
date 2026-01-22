@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte - Atlassian Radar</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base font-family from Inter */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        /* Custom styles to mimic Tailwind's prose plugin and Atlassian aesthetic for markdown-rendered content */
+        .report-content h1 { font-size: 2.25rem; line-height: 2.5rem; font-weight: 700; color: #1e293b; margin-top: 2.5rem; margin-bottom: 1.5rem; } /* text-3xl font-bold text-slate-800 mb-6 */
+        .report-content h2 { font-size: 1.5rem; line-height: 2rem; font-weight: 600; color: #1e293b; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; } /* text-2xl font-semibold text-slate-800 mb-4 border-b border-slate-200 pb-2 */
+        .report-content h3 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 500; color: #1e293b; margin-top: 1.5rem; margin-bottom: 0.75rem; } /* text-xl font-medium text-slate-800 mb-3 */
+        .report-content h4 { font-size: 1.125rem; line-height: 1.75rem; font-weight: 500; color: #1e293b; margin-top: 1rem; margin-bottom: 0.5rem; } /* text-lg font-medium text-slate-800 mb-2 */
+        .report-content p { margin-bottom: 1rem; color: #475569; line-height: 1.625; } /* mb-4 text-slate-600 leading-relaxed */
+        .report-content ul { list-style-type: disc; padding-left: 1.25rem; margin-bottom: 1rem; } /* list-disc pl-5 mb-4 */
+        .report-content ol { list-style-type: decimal; padding-left: 1.25rem; margin-bottom: 1rem; } /* list-decimal pl-5 mb-4 */
+        .report-content li { margin-bottom: 0.5rem; color: #334155; } /* text-slate-700 */
+        .report-content li > p { margin-bottom: 0; } /* Remove bottom margin for paragraphs inside list items */
+        .report-content strong { font-weight: 600; color: #1e293b; } /* font-semibold text-slate-800 */
+        .report-content em { font-style: italic; color: #334155; } /* italic text-slate-700 */
+        .report-content a { color: #2563eb; text-decoration: underline; } /* text-blue-600 hover:underline */
+        .report-content a:hover { text-decoration: underline; }
+        .report-content blockquote { border-left: 4px solid #cbd5e1; padding-left: 1rem; padding-top: 0.25rem; padding-bottom: 0.25rem; font-style: italic; color: #64748b; margin-top: 1rem; margin-bottom: 1rem; } /* border-l-4 border-slate-300 pl-4 py-1 italic text-slate-500 */
+        .report-content pre { background-color: #f1f5f9; padding: 0.75rem; border-radius: 0.375rem; font-size: 0.875rem; overflow-x: auto; margin-top: 1rem; margin-bottom: 1rem; } /* bg-slate-100 p-3 rounded-md text-sm overflow-x-auto */
+        .report-content code { background-color: #f1f5f9; padding-left: 0.25rem; padding-right: 0.25rem; padding-top: 0.125rem; padding-bottom: 0.125rem; border-radius: 0.125rem; font-size: 0.875rem; } /* bg-slate-100 px-1 py-0.5 rounded-sm text-sm */
+        .report-content img { max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 1rem; margin-bottom: 1rem; border-radius: 0.375rem; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); } /* max-w-full h-auto block mx-auto my-4 rounded-md shadow-sm */
+        .report-content table { width: 100%; border-collapse: collapse; margin-top: 1rem; margin-bottom: 1rem; }
+        .report-content th, .report-content td { border: 1px solid #e2e8f0; padding: 0.75rem; text-align: left; }
+        .report-content th { background-color: #f8fafc; font-weight: 600; color: #1e293b; } /* bg-slate-50 font-semibold text-slate-800 */
+        .report-content tr:nth-child(even) { background-color: #f8fafc; } /* bg-slate-50 for even rows */
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-600 antialiased">
+    <!-- Navigation Dropdown (Fixed at top) -->
+    <div class="fixed top-0 left-0 w-full bg-slate-100 p-4 border-b border-slate-200 z-50">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <h2 class="text-lg font-semibold text-slate-800">Historial de Reportes</h2>
+            <select id="reportSelector" class="block w-auto pl-3 pr-10 py-2 text-base border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm">
+                <option value="" disabled selected>Cargando reportes...</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="mt-20 mx-auto max-w-4xl p-6 lg:p-8 bg-white shadow-md rounded-lg border border-slate-200 mb-8">
+        <div class="report-content">
+            <!-- The actual markdown content, converted to HTML by the host system, will be inserted here.
+                 The CSS rules above will style the elements generated from the markdown. -->
+            {{ $json.content.parts[0].text }}
+        </div>
+    </div>
+
+    <!-- JavaScript for Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const reportSelector = document.getElementById('reportSelector');
+            const githubUser = 'raspes';
+            const githubRepo = 'atlassian-radar'; // IMPORTANT: This constant is required
+            const githubApiUrl = `https://api.github.com/repos/${githubUser}/${githubRepo}/git/trees/main?recursive=1`;
+            const baseUrl = `https://${githubUser}.github.io/${githubRepo}/`;
+
+            fetch(githubApiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (!data || !data.tree) {
+                        throw new Error('Invalid data structure from GitHub API.');
+                    }
+
+                    const htmlFiles = data.tree
+                        .filter(file => file.path.endsWith('.html') && file.type === 'blob')
+                        .map(file => file.path)
+                        .filter(fileName => fileName !== 'index.html' && fileName !== '404.html');
+
+                    // Sort files by name in descending order (newest to oldest)
+                    htmlFiles.sort((a, b) => b.localeCompare(a));
+
+                    reportSelector.innerHTML = ''; // Clear "Cargando reportes..."
+                    
+                    // Add a default "Select a report" option
+                    const defaultSelectOption = document.createElement('option');
+                    defaultSelectOption.value = "";
+                    defaultSelectOption.textContent = "Seleccionar otro reporte...";
+                    defaultSelectOption.disabled = true;
+                    defaultSelectOption.selected = true; // Make it the initially selected option
+                    reportSelector.appendChild(defaultSelectOption);
+
+                    htmlFiles.forEach(fileName => {
+                        const option = document.createElement('option');
+                        option.value = fileName;
+                        // Format the display name (e.g., remove .html, replace hyphens with spaces, capitalize words)
+                        let displayFileName = fileName.replace(/\.html$/, '')
+                                                    .replace(/-/g, ' ')
+                                                    .split(' ')
+                                                    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                                                    .join(' ');
+                        option.textContent = displayFileName;
+                        reportSelector.appendChild(option);
+                    });
+
+                    // Set current report as selected if applicable
+                    const currentPath = window.location.pathname.split('/').pop();
+                    if (currentPath && htmlFiles.includes(currentPath)) {
+                        reportSelector.value = currentPath;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching GitHub repository files:', error);
+                    reportSelector.innerHTML = '<option value="" disabled selected>Error al cargar reportes</option>';
+                    reportSelector.disabled = true; // Disable if an error occurs
+                });
+
+            reportSelector.addEventListener('change', function() {
+                const selectedFile = this.value;
+                if (selectedFile) {
+                    window.location.href = baseUrl + selectedFile;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
