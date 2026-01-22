@@ -1,28 +1,25 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REPORTE DE INTELIGENCIA ATLASSIAN - Enero 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Reporte de Avance del Proyecto Atlassian Radar</title>
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
                     },
                     colors: {
-                        slate: {
-                            50: '#f8fafc',
-                            200: '#e2e8f0',
-                            600: '#475569',
-                            800: '#1e293b',
-                        },
                         blue: {
-                            500: '#0052cc', /* Atlassian blue for focus rings */
+                            500: '#0052cc', // Atlassian Blue
+                            600: '#0065ff', // Atlassian Hover Blue
+                            700: '#0921ff', // Darker Atlassian Blue
                         }
                     }
                 }
@@ -30,164 +27,161 @@
         }
     </script>
     <style>
-        /* Custom styles if needed, but Tailwind should cover most */
-        body {
-            font-feature-settings: "cv03", "cv04", "salt", "liga";
+        /* Custom styles to ensure Atlassian feel for focus ring */
+        .focus-ring-atlassian:focus {
+            outline: none;
+            border-color: #0052cc; /* Atlassian Blue */
+            box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.45); /* Atlassian Blue with transparency */
         }
     </style>
 </head>
-<body class="bg-slate-50 font-sans antialiased text-slate-600">
+<body class="bg-slate-50 min-h-screen font-sans text-slate-600">
 
-    <div class="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        <div class="bg-white shadow-md rounded-lg border border-slate-200 p-6 mb-8">
-            <label for="report-selector" class="block text-sm font-medium text-slate-800 mb-2">Seleccionar otro reporte:</label>
-            <select id="report-selector" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-slate-200 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm">
-                <option value="" disabled selected>Cargando reportes...</option>
-            </select>
+    <!-- Navegación Histórica Automática -->
+    <header class="py-4 bg-white shadow-sm border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between flex-wrap gap-4">
+            <h1 class="text-xl font-semibold text-slate-800">Atlassian Radar</h1>
+            <div class="flex items-center gap-2">
+                <label for="historical-navigation" class="sr-only">Seleccionar Reporte Histórico</label>
+                <select id="historical-navigation" class="block w-full min-w-[200px] sm:min-w-[250px] py-2 px-3 border border-slate-300 bg-white rounded-md shadow-sm focus-ring-atlassian sm:text-sm text-slate-700">
+                    <option value="" disabled selected>Ver Reportes Anteriores</option>
+                    <!-- Las opciones se cargarán aquí con JavaScript -->
+                </select>
+            </div>
         </div>
+    </header>
 
-        <div class="bg-white shadow-md rounded-lg border border-slate-200 p-6 sm:p-8 lg:p-10">
-            <h1 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-6 border-b pb-4 border-slate-200">REPORTE DE INTELIGENCIA ATLASSIAN</h1>
-            <p class="text-lg mb-2 text-slate-800 font-medium">Periodo: Enero 15, 2026 - Enero 22, 2026</p>
-            <p class="text-md mb-8">Generado por: Atlassian Master Architect Radar</p>
+    <!-- Contenido Principal del Reporte -->
+    <main class="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div class="bg-white shadow-md rounded-lg border border-slate-200 p-8">
+            <h1 class="text-3xl sm:text-4xl text-slate-800 font-bold mb-6">Reporte de Avance del Proyecto Atlassian Radar</h1>
 
-            <p class="mb-4">Entendido, "Atlassian Master Architect Radar" en posición.</p>
-            <p class="mb-6">Dado que la fecha solicitada (Enero 15, 2026 - Enero 22, 2026) es en el futuro, es imposible acceder a datos reales de Atlassian. Sin embargo, para cumplir con el espíritu y la estructura de la solicitud, he generado un <strong>reporte simulado y plausible</strong>. Este informe refleja los tipos de actualizaciones, tendencias y problemas que típicamente se observan en el ecosistema Atlassian, basándose en su hoja de ruta actual hacia la IA, la automatización, la nube empresarial y la mejora de la experiencia del desarrollador.</p>
+            <h2 class="text-2xl sm:text-3xl text-slate-800 font-bold mb-4 mt-8">Introducción</h2>
+            <p class="mb-4 leading-relaxed">Este reporte detalla los avances y las próximas etapas del proyecto <strong>Atlassian Radar</strong>, enfocado en la mejora continua de nuestras herramientas internas de desarrollo.</p>
+            <p class="mb-4 leading-relaxed">El objetivo principal es optimizar los flujos de trabajo y la colaboración entre equipos.</p>
 
-            <h2 class="text-2xl sm:text-3xl font-semibold text-slate-800 mt-10 mb-6 pb-2 border-b border-slate-200">1. THE PRODUCTS (User & Collab)</h2>
+            <h3 class="text-xl sm:text-2xl text-slate-800 font-bold mb-3 mt-6">Hitos Logrados</h3>
+            <ul class="list-disc ml-6 mb-4 space-y-2">
+                <li><strong>Fase 1 Completada</strong>: Implementación inicial del nuevo módulo de gestión de tareas.</li>
+                <li><strong>Integración Exitosa</strong>: Conexión con sistemas de CI/CD.</li>
+                <li><strong>Capacitación</strong>: Sesiones de entrenamiento para los equipos de desarrollo A y B.</li>
+            </ul>
 
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-slate-200">
-                    <thead class="bg-slate-50">
+            <h2 class="text-2xl sm:text-3xl text-slate-800 font-bold mb-4 mt-8">Próximos Pasos</h2>
+            <ol class="list-decimal ml-6 mb-4 space-y-2">
+                <li><strong>Despliegue General</strong>: Planificación para el lanzamiento a todos los equipos.</li>
+                <li><strong>Recolección de Feedback</strong>: Establecer canales para la retroalimentación de los usuarios.</li>
+                <li><strong>Fase 2 de Desarrollo</strong>: Inicio de las mejoras basadas en el feedback.</li>
+            </ol>
+
+            <h3 class="text-xl sm:text-2xl text-slate-800 font-bold mb-3 mt-6">Fechas Clave</h3>
+            <div class="overflow-x-auto mb-4">
+                <table class="w-full border-collapse my-4">
+                    <thead>
                         <tr>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-600 uppercase tracking-wider">Estado</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-600 uppercase tracking-wider">Producto</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-600 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
+                            <th class="px-4 py-2 text-left bg-slate-100 text-slate-700 border border-slate-300 font-semibold">Evento</th>
+                            <th class="px-4 py-2 text-left bg-slate-100 text-slate-700 border border-slate-300 font-semibold">Fecha Prevista</th>
+                            <th class="px-4 py-2 text-left bg-slate-100 text-slate-700 border border-slate-300 font-semibold">Estado</th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-slate-200">
+                    <tbody>
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                    🟢
-                                </span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-slate-800 font-medium">Jira Software</td>
-                            <td class="px-6 py-4 text-slate-600">
-                                <p class="font-medium text-slate-700"><strong>Feature: Mejoras en la Visibilidad de Sprints y Roadmaps.</strong></p>
-                                <p>Nuevas opciones de filtrado y visualización para destacar el progreso en roadmaps de múltiples equipos e hitos de sprints activos.</p>
-                                <p class="mt-2 text-sm text-slate-500"><strong>Insight Consultor:</strong> Permite a los consultores demostrar cómo equipos grandes pueden sincronizar y comunicar el progreso de forma transparente. Facilita la venta de una cultura de planificación ágil a escala, mostrando el valor de la claridad y la alineación. Es clave para clientes que luchan con la visibilidad del 'big picture' en su transformación ágil.</p>
-                            </td>
+                            <td class="px-4 py-2 border border-slate-300">Revisión de Seguridad</td>
+                            <td class="px-4 py-2 border border-slate-300">2023-11-15</td>
+                            <td class="px-4 py-2 border border-slate-300">Pendiente</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                    🟢
-                                </span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-slate-800 font-medium">Confluence</td>
-                            <td class="px-6 py-4 text-slate-600">
-                                <p class="font-medium text-slate-700"><strong>Feature: Integración de Atlassian Rovo para la Búsqueda de Conocimiento.</strong></p>
-                                <p>Ahora es posible invocar a Rovo directamente desde el buscador de Confluence para obtener resúmenes de documentos, respuestas a preguntas complejas basadas en el contenido de la wiki, o encontrar expertos relacionados.</p>
-                                <p class="mt-2 text-sm text-slate-500"><strong>Insight Consultor:</strong> Una demo potente puede mostrar cómo Confluence se convierte en un centro de conocimiento activo e inteligente, reduciendo el tiempo de búsqueda y mejorando la toma de decisiones. Impulsa la venta de la suite Atlassian como un ecosistema cohesivo e impulsado por IA, enfatizando el valor para la gestión del conocimiento y la eficiencia operativa.</p>
-                            </td>
+                            <td class="px-4 py-2 border border-slate-300">Lanzamiento Beta</td>
+                            <td class="px-4 py-2 border border-slate-300">2023-11-30</td>
+                            <td class="px-4 py-2 border border-slate-300">En progreso</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">
-                                    ⚪
-                                </span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-slate-800 font-medium">Trello</td>
-                            <td class="px-6 py-4 text-slate-600">Sin Novedad</td>
+                            <td class="px-4 py-2 border border-slate-300">Reunión de Stakeholders</td>
+                            <td class="px-4 py-2 border border-slate-300">2023-12-05</td>
+                            <td class="px-4 py-2 border border-slate-300">Programada</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- This is where the markdown content would continue being converted to HTML.
-                 For this example, I've only converted the provided table. -->
+            <blockquote class="border-l-4 border-blue-500 pl-4 italic text-slate-700 my-4 py-2">
+                "La colaboración es el combustible que permite a la gente común lograr resultados extraordinarios."
+                <br>— Atlassian
+            </blockquote>
 
-            <!-- Example of how other markdown elements would be converted: -->
-            <!--
-            <h2 class="text-2xl sm:text-3xl font-semibold text-slate-800 mt-10 mb-6 pb-2 border-b border-slate-200">2. Heading Example</h2>
-            <p class="mb-4">This is a paragraph with <strong>some strong text</strong> and <em>emphasized text</em>.</p>
-            <ul class="list-disc list-inside mb-4 pl-4">
-                <li class="mb-1">List item one</li>
-                <li class="mb-1">List item two</li>
-                <li class="mb-1">List item three</li>
-            </ul>
-            <pre class="bg-slate-100 p-4 rounded-md text-sm overflow-x-auto mb-4 text-slate-800"><code>console.log('This is a code block.');</code></pre>
-            -->
+            <hr class="my-8 border-t border-slate-200">
+
+            <p class="mb-4 leading-relaxed">Para más información, consulte nuestra <a href="https://intranet.example.com/atlassian-radar-docs" class="text-blue-600 hover:text-blue-800 underline">documentación interna</a>.</p>
+            <p class="mb-4 leading-relaxed">También puede ver el código fuente en <code class="bg-slate-100 text-slate-800 rounded px-1 py-0.5 font-mono text-sm">src/main.js</code>.</p>
+
+            <pre class="bg-slate-800 text-white rounded-md p-4 overflow-x-auto text-sm font-mono my-4"><code class="language-javascript">// Ejemplo de código para mostrar el estilo
+function initRadar() {
+  console.log("Atlassian Radar inicializado.");
+  // Más lógica aquí
+}
+
+initRadar();</code></pre>
+
         </div>
-    </div>
+    </main>
 
+    <!-- Script de Navegación Histórica -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const selectElement = document.getElementById('report-selector');
+        document.addEventListener('DOMContentLoaded', () => {
+            const historicalNavigation = document.getElementById('historical-navigation');
+
+            // Configuración del repositorio de GitHub
             const githubUser = 'raspes';
-            const githubRepo = 'atlassian-radar'; // IMPORTANTE: Repositorio a consultar
-            const branch = 'main';
-            const baseUrl = `https://raspes.github.io/${githubRepo}/`; // Base URL para la redirección
+            const githubRepo = 'atlassian-radar'; // IMPORTANTE: Esta es la constante marcada
+            const githubBranch = 'main';
+            const baseUrl = `https://${githubUser}.github.io/${githubRepo}/`;
+            const githubApiUrl = `https://api.github.com/repos/${githubUser}/${githubRepo}/contents?ref=${githubBranch}`;
 
-            async function fetchRepoFiles() {
-                const url = `https://api.github.com/repos/${githubUser}/${githubRepo}/git/trees/${branch}?recursive=1`;
-
+            const fetchHistoricalReports = async () => {
                 try {
-                    const response = await fetch(url);
+                    const response = await fetch(githubApiUrl);
                     if (!response.ok) {
-                        if (response.status === 404) {
-                            throw new Error('Repositorio o rama no encontrada.');
-                        }
-                        throw new Error(`Error HTTP: ${response.status}`);
+                        throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
                     }
-                    const data = await response.json();
+                    const files = await response.json();
 
-                    if (!data.tree) {
-                        throw new Error('Estructura de árbol de Git no encontrada.');
-                    }
+                    const htmlFiles = files
+                        .filter(file => file.name.endsWith('.html') && file.name !== 'index.html' && file.name !== '404.html')
+                        .sort((a, b) => b.name.localeCompare(a.name)); // Ordenar de más reciente a más antiguo por nombre
 
-                    const files = data.tree
-                        .filter(item => item.type === 'blob' && item.path.endsWith('.html'))
-                        .map(item => item.path)
-                        .filter(path => path !== 'index.html' && path !== '404.html');
-
-                    // Ordenar de más reciente a más antiguo (descendente por nombre)
-                    // Asumiendo que los nombres de archivo incluyen fechas o están diseñados para este orden.
-                    // Para un ordenamiento por fecha real de modificación, se necesitaría otra API o un proceso de build.
-                    // Aquí, un ordenamiento lexicográfico inverso simula 'más reciente' si los nombres están en formato YYYY-MM-DD-nombre.html
-                    files.sort((a, b) => b.localeCompare(a));
-
-                    populateSelector(files);
+                    htmlFiles.forEach(file => {
+                        const option = document.createElement('option');
+                        option.value = file.name;
+                        // Formatear el nombre para que sea más legible en el dropdown
+                        const displayName = file.name
+                            .replace('.html', '')
+                            .replace(/-/g, ' ')
+                            .split(' ')
+                            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                            .join(' ');
+                        option.textContent = displayName;
+                        historicalNavigation.appendChild(option);
+                    });
 
                 } catch (error) {
-                    console.error('Error al obtener archivos del repositorio:', error);
-                    selectElement.innerHTML = '<option value="" disabled selected>Error al cargar reportes.</option>';
-                }
-            }
-
-            function populateSelector(files) {
-                selectElement.innerHTML = '<option value="" disabled selected>Selecciona un reporte...</option>';
-                files.forEach(file => {
+                    console.error('Error al obtener los reportes históricos:', error);
+                    // Opcional: Mostrar un mensaje de error al usuario
                     const option = document.createElement('option');
-                    option.value = file;
-                    // Limpiar el nombre para mostrar, quitando la extensión .html y reemplazando guiones
-                    const displayName = file.replace('.html', '').replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
-                    option.textContent = displayName;
-                    selectElement.appendChild(option);
-                });
-            }
+                    option.value = "";
+                    option.textContent = "Error al cargar reportes";
+                    historicalNavigation.appendChild(option);
+                }
+            };
 
-            selectElement.addEventListener('change', function() {
-                const selectedFile = this.value;
+            historicalNavigation.addEventListener('change', (event) => {
+                const selectedFile = event.target.value;
                 if (selectedFile) {
                     window.location.href = baseUrl + selectedFile;
                 }
             });
 
-            fetchRepoFiles();
+            fetchHistoricalReports();
         });
     </script>
 </body>
 </html>
-```
