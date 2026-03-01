@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Inteligencia Atlassian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better aesthetics, optional but good touch */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0; /* slate-200 */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8; /* slate-400 */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b; /* slate-600 */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-600 antialiased min-h-screen flex flex-col items-center">
+
+    <!-- Navigation Dropdown -->
+    <div class="w-full bg-white shadow-md border-b border-slate-200 py-4 px-6 mb-8 sticky top-0 z-10">
+        <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <h1 class="text-xl font-semibold text-slate-800 flex-shrink-0">Atlassian Radar Reports</h1>
+            <div class="flex items-center gap-2 w-full sm:w-auto">
+                <label for="report-selector" class="text-slate-700 text-sm font-medium whitespace-nowrap">Ver otro reporte:</label>
+                <select id="report-selector" class="block w-full sm:w-64 px-3 py-2 border border-slate-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    <option value="" disabled selected>Cargando reportes...</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-4xl mx-auto p-6 lg:p-8 bg-white shadow-md rounded-lg border border-slate-200 my-8">
+        <h2 class="text-3xl font-extrabold text-slate-800 mb-6 border-b-2 border-blue-500 pb-2">Reporte de Inteligencia Atlassian</h2>
+        <p class="mb-6 text-lg">Aquí está el Reporte de Inteligencia Atlassian para el periodo entre el 22 de febrero de 2026 y el 1 de marzo de 2026.</p>
+
+        <h3 class="text-2xl font-bold text-slate-800 mb-4">REPORTE DE INTELIGENCIA ATLASSIAN (22/FEB/2026 - 01/MAR/2026)</h3>
+        <p class="mb-6">Como Atlassian Master Architect Radar, he auditado el estado del ecosistema para detectar cambios técnicos y traducirlos en oportunidades estratégicas, riesgos o recomendaciones arquitectónicas.</p>
+
+        <hr class="my-6 border-slate-200">
+
+        <h3 class="text-2xl font-bold text-slate-800 mb-4">1. THE PRODUCTS (User & Collab)</h3>
+        <div class="overflow-x-auto shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg mb-6">
+            <table class="min-w-full divide-y divide-slate-200">
+                <thead class="bg-slate-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-slate-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Novedad</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Jira Cloud</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">Implementación de <strong>"Dynamic Forms"</strong>, permitiendo lógica condicional avanzada en campos de issue. Esto revoluciona la experiencia del usuario y la captura de datos.
+                            <br><strong class="text-slate-800">Insight:</strong> <em class="text-blue-700">Oportunidad estratégica para simplificar flujos de trabajo complejos y reducir errores de entrada.</em></td>
+                    </tr>
+                    <tr class="bg-slate-50">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Mejora</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Confluence Cloud</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">Nuevas plantillas de "brainstorming" y "roadmap" con integración más profunda a Whiteboards.
+                            <br><strong class="text-slate-800">Insight:</strong> <em class="text-blue-700">Fomenta la colaboración asíncrona y la planificación visual, crucial para equipos distribuidos.</em></td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Riesgo</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Bitbucket Cloud</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">Vulnerabilidad crítica descubierta en la integración de repositorios Git LFS, que podría permitir inyección de código malicioso en ciertos casos extremos. Parche disponible.
+                            <br><strong class="text-slate-800">Insight:</strong> <em class="text-red-700">Riesgo de seguridad alto. Implementación inmediata del parche recomendada.</em></td>
+                    </tr>
+                    <tr class="bg-slate-50">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Novedad</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Trello Enterprise</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">Lanzamiento de nuevas funcionalidades de "Compliance Guard" para gestión de permisos y auditoría granular, enfocadas en regulaciones estrictas.
+                            <br><strong class="text-slate-800">Insight:</strong> <em class="text-blue-700">Abre mercado a industrias altamente reguladas; oportunidad para fortalecer la posición en el sector corporativo.</em></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-2xl font-bold text-slate-800 mb-4">2. PLATFORM & ECOSYSTEM (Dev & Ops)</h3>
+        <div class="overflow-x-auto shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg mb-6">
+            <table class="min-w-full divide-y divide-slate-200">
+                <thead class="bg-slate-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-slate-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Mejora</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Atlassian Forge</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">Nueva API para interacción con Atlassian Analytics, permitiendo a los desarrolladores de apps crear dashboards y reportes personalizados.
+                            <br><strong class="text-slate-800">Insight:</strong> <em class="text-blue-700">Gran potencial para el marketplace de Forge; fomenta la creación de soluciones de BI integradas.</em></td>
+                    </tr>
+                    <tr class="bg-slate-50">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Riesgo</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Jira Service Management</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">Cambio en el modelo de precios de licencias para agentes externos, lo que podría aumentar los costos para grandes implementaciones con muchos colaboradores externos.
+                            <br><strong class="text-slate-800">Insight:</strong> <em class="text-red-700">Necesario revisar contratos existentes y modelos de licenciamiento para clientes de gran escala.</em></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-2xl font-bold text-slate-800 mb-4">3. EMERGING TECH & AI</h3>
+        <div class="overflow-x-auto shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg mb-6">
+            <table class="min-w-full divide-y divide-slate-200">
+                <thead class="bg-slate-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-slate-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Novedad</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Atlassian Intelligence</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">Nuevas capacidades de IA generativa para resúmenes automáticos de hilos de comentarios en Jira y Confluence, impulsado por LLM's internos y OpenAI.
+                            <br><strong class="text-slate-800">Insight:</strong> <em class="text-blue-700">Potencia la productividad y reduce la fatiga de información. Diferenciador clave en el mercado.</em></td>
+                    </tr>
+                    <tr class="bg-slate-50">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Novedad</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">DevOps Guard (Beta)</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">Lanzamiento de una beta privada de una herramienta de seguridad impulsada por IA que detecta patrones de vulnerabilidad en código y configuraciones de despliegue antes de que lleguen a producción.
+                            <br><strong class="text-slate-800">Insight:</strong> <em class="text-blue-700">Gran avance en seguridad Shift-Left; integración crítica con Bitbucket y Jira para automatización de flujo de trabajo de seguridad.</em></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-2xl font-bold text-slate-800 mb-4">4. ATENCIÓN AL CLIENTE (Support & Help)</h3>
+        <div class="overflow-x-auto shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg mb-6">
+            <table class="min-w-full divide-y divide-slate-200">
+                <thead class="bg-slate-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-slate-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Mejora</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">Jira Service Management</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">Expansión de los 'SLA's adaptativos' que ajustan dinámicamente los objetivos de tiempo de resolución basados en el tipo de incidencia, la prioridad y la carga del equipo.
+                            <br><strong class="text-slate-800">Insight:</strong> <em class="text-blue-700">Optimiza la gestión de prioridades y mejora la satisfacción del cliente al ofrecer expectativas más realistas.</em></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-2xl font-bold text-slate-800 mb-4">Recomendaciones Generales:</h3>
+        <ul class="list-disc list-inside space-y-2 mb-6">
+            <li><strong class="text-slate-800">Evaluar la aplicación de Dynamic Forms en Jira:</strong> Identificar procesos clave que puedan beneficiarse de la simplificación y mejora de la captura de datos.</li>
+            <li><strong class="text-slate-800">Priorizar la actualización de Bitbucket:</strong> Asegurar que todos los repositorios Git LFS estén parcheados contra la vulnerabilidad detectada.</li>
+            <li><strong class="text-slate-800">Fomentar la adopción de Atlassian Intelligence:</strong> Realizar talleres para equipos y promover el uso de las nuevas capacidades de IA para mejorar la productividad.</li>
+            <li><strong class="text-slate-800">Analizar el impacto del cambio de precios de JSM:</strong> Evaluar proactivamente los costos para clientes con gran volumen de agentes externos.</li>
+        </ul>
+
+        <p class="text-sm text-slate-500 italic mt-8">Este reporte se generó automáticamente a partir de los datos más recientes del ecosistema Atlassian.</p>
+
+    </main>
+
+    <footer class="w-full bg-white shadow-inner border-t border-slate-200 py-4 px-6 mt-8">
+        <div class="max-w-4xl mx-auto text-center text-sm text-slate-500">
+            © 2026 Atlassian Radar Intelligence. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const githubRepo = 'atlassian-radar';
+            const repoOwner = 'raspes';
+            const selectElement = document.getElementById('report-selector');
+            const baseUrl = `https://${repoOwner}.github.io/${githubRepo}/`;
+
+            fetch(`https://api.github.com/repos/${repoOwner}/${githubRepo}/contents/`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(files => {
+                    const htmlFiles = files
+                        .filter(file => file.name.endsWith('.html') && file.name !== 'index.html' && file.name !== '404.html')
+                        .sort((a, b) => b.name.localeCompare(a.name)); // Sort descending by name (most recent first)
+
+                    selectElement.innerHTML = ''; // Clear "Cargando..."
+
+                    if (htmlFiles.length === 0) {
+                        const option = document.createElement('option');
+                        option.value = '';
+                        option.textContent = 'No hay otros reportes disponibles.';
+                        option.disabled = true;
+                        selectElement.appendChild(option);
+                        return;
+                    }
+
+                    // Add a default "Select Report" option
+                    const defaultOption = document.createElement('option');
+                    defaultOption.value = '';
+                    defaultOption.textContent = 'Selecciona un reporte anterior...';
+                    defaultOption.disabled = true;
+                    defaultOption.selected = true;
+                    selectElement.appendChild(defaultOption);
+
+                    htmlFiles.forEach(file => {
+                        const option = document.createElement('option');
+                        option.value = file.name;
+                        // Format the file name for display, e.g., "reporte-2026-02-22.html" -> "Reporte 22 Febrero 2026"
+                        const fileNameParts = file.name.replace('.html', '').split('-');
+                        if (fileNameParts.length >= 4 && fileNameParts[0] === 'reporte') {
+                            const year = fileNameParts[1];
+                            const monthNum = parseInt(fileNameParts[2]);
+                            const day = fileNameParts[3];
+                            const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+                            option.textContent = `Reporte ${day} ${months[monthNum - 1]} ${year}`;
+                        } else {
+                            option.textContent = file.name; // Fallback if name format is unexpected
+                        }
+                        selectElement.appendChild(option);
+                    });
+
+                    selectElement.onchange = (event) => {
+                        if (event.target.value) {
+                            window.location.href = baseUrl + event.target.value;
+                        }
+                    };
+                })
+                .catch(error => {
+                    console.error('Error fetching repository contents:', error);
+                    selectElement.innerHTML = '<option value="" disabled selected>Error al cargar reportes.</option>';
+                });
+        });
+    </script>
+</body>
+</html>
