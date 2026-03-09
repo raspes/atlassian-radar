@@ -3,432 +3,494 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reporte de Inteligencia Atlassian - Radar del Arquitecto Maestro</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Reporte de Inteligencia Atlassian - 02/03/2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: 'Inter', system-ui, sans-serif;
+            background-color: #f8fafc; /* bg-slate-50 */
+            color: #475569; /* text-slate-600 */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e293b; /* text-slate-800 */
+        }
+        /* Custom styles for Tailwind based on Atlassian design */
+        .container-atlassian {
+            background-color: #ffffff; /* bg-white */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+            border-radius: 0.5rem; /* rounded-lg */
+            border: 1px solid #e2e8f0; /* border-slate-200 */
+        }
+        .table-atlassian th, .table-atlassian td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        .table-atlassian th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 0.875rem; /* text-sm */
+        }
+        .table-atlassian tr:last-child td {
+            border-bottom: none;
+        }
+        /* Status indicators */
+        .status-green { color: #22c55e; } /* green-500 */
+        .status-yellow { color: #eab308; } /* yellow-500 */
+        .status-red { color: #ef4444; }   /* red-500 */
+        .status-white { color: #94a3b8; } /* slate-400 for 'Sin Novedad' */
+
+        /* Select styling for navigation */
+        .form-select-atlassian {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #475569;
+            background-color: #fff;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3e%3cpath d='M7 7l3-3 3 3m0 6l-3 3-3-3' stroke='%2394a3b8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.5em 1.5em;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.375rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .form-select-atlassian:focus {
+            border-color: #3b82f6; /* blue-500 */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* blue-500 with opacity */
+            outline: none;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-600 leading-relaxed antialiased">
+<body class="bg-slate-50 antialiased leading-relaxed">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <nav class="mb-8 container-atlassian p-4">
+            <label for="historic-reports" class="block text-slate-700 text-sm font-medium mb-2">Ver reportes anteriores:</label>
+            <select id="historic-reports" class="form-select-atlassian">
+                <option value="">Cargando reportes...</option>
+            </select>
+        </nav>
 
-    <!-- Navegación Histórica Automática -->
-    <div class="container mx-auto max-w-4xl mt-8 p-4 bg-white shadow-sm rounded-lg border border-slate-200">
-        <label for="history-select" class="block text-sm font-medium text-slate-700 mb-2">Ver reportes anteriores:</label>
-        <select id="history-select" class="block w-full p-2 border border-slate-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-slate-700">
-            <option value="">Cargando reportes...</option>
-        </select>
-    </div>
+        <main class="container-atlassian p-6 sm:p-8">
+            <p class="text-lg text-slate-700 mb-6">¡Excelente! Preparando el radar para el periodo del 2 al 9 de marzo de 2026. Como "Atlassian Master Architect Radar", he auditado el ecosistema para ofrecerte inteligencia estratégica, detectando cambios técnicos y traduciéndolos en oportunidades, riesgos y consejos de arquitectura.</p>
 
-    <div class="container mx-auto max-w-4xl my-8 p-6 bg-white shadow-md rounded-lg border border-slate-200">
-        <h2 class="text-3xl font-bold text-slate-800 mb-4">REPORTE DE INTELIGENCIA ATLASSIAN - RADAR DEL ARQUITECTO MAESTRO</h2>
+            <hr class="border-slate-200 my-8">
 
-        <p class="mb-2 text-slate-700"><strong>Período:</strong> 1 de marzo de 2026 – 8 de marzo de 2026</p>
-        <p class="mb-4 text-slate-700"><strong>Generado por:</strong> Atlassian Master Architect Radar</p>
+            <h2 class="text-3xl font-bold mb-4">REPORTE DE INTELIGENCIA ATLASSIAN (02/03/2026 - 09/03/2026)</h2>
 
-        <hr class="my-6 border-slate-200">
+            <div class="mb-6 space-y-2">
+                <p><strong class="font-semibold text-slate-700">ROL:</strong> Atlassian Master Architect Radar</p>
+                <p><strong class="font-semibold text-slate-700">OBJETIVO:</strong> Auditoría semanal del ecosistema Atlassian para identificar cambios técnicos y su impacto estratégico.</p>
+            </div>
 
-        <h3 class="text-xl font-semibold text-slate-800 mb-3 mt-6">1. THE PRODUCTS (User & Collab)</h3>
+            <h3 class="text-2xl font-semibold mt-8 mb-4">1. THE PRODUCTS (User & Collab)</h3>
 
-        <div class="overflow-x-auto mb-6">
-            <table class="min-w-full divide-y divide-slate-200">
-                <thead class="bg-slate-50">
-                    <tr>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-slate-200">
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Jira Software Cloud</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Mejora en la visualización de dependencias de Issues:</strong> Ahora es posible ver un gráfico interactivo de dependencias (bloquea, es bloqueado por) directamente desde la vista del issue, con filtrado rápido. <br>
-                            <strong>Insight Consultor:</strong> Facilita la comprensión del impacto de un issue. Oportunidad para demostrar cómo Jira no solo gestiona tareas, sino que visualiza la interconexión del trabajo. Permite a los Product Owners y Scrum Masters identificar cuellos de botella y coordinar mejor los equipos. Demuestra valor en la planificación de releases y la gestión de impedimentos.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Jira Work Management Cloud</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Nuevas plantillas de automatización para flujos de aprobación:</strong> Se han añadido plantillas pre-configuradas para automatizar aprobaciones de documentos, solicitudes de vacaciones y pedidos de compra, con integraciones básicas para correo electrónico y Slack. <br>
-                            <strong>Insight Consultor:</strong> Acelera la adopción para equipos no técnicos. Podemos vender Jira Work Management como una solución integral para procesos internos más allá del desarrollo de software, destacando la facilidad de configuración y la reducción de la fricción en procesos de aprobación.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Confluence Cloud</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Mejoras en el editor de tablas:</strong> Introducción de funciones básicas de hoja de cálculo (suma, promedio) y ajuste de tamaño automático de columnas. <br>
-                            <strong>Insight Consultor:</strong> Mejora la experiencia del usuario final, especialmente para equipos que gestionan datos tabulares directamente en Confluence. Permite demos más atractivas mostrando Confluence como una fuente viva de información, reduciendo la necesidad de exportar a Excel para cálculos simples. Facilita la creación de reports y dashboards ligeros dentro de Confluence.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Trello</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Loom</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Transcripción automática mejorada y búsqueda por palabras clave en videos:</strong> El servicio de transcripción AI ha sido actualizado para mayor precisión, y ahora permite a los usuarios buscar y saltar a puntos específicos dentro de la transcripción de un video. <br>
-                            <strong>Insight Consultor:</strong> Aumenta la eficiencia para el consumo de información asíncrona. Podemos vender Loom como una herramienta esencial para la "documentación en video" dentro de Confluence o Jira, destacando cómo el contenido se vuelve más accesible y útil, ahorrando tiempo a los equipos distribuidos.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Atlassian Rovo</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full table-atlassian">
+                    <thead>
+                        <tr>
+                            <th class="w-1/12">Estado</th>
+                            <th class="w-2/12">Producto</th>
+                            <th class="w-9/12">Detalle Técnico + Insight Consultor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Jira Software</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> Mejora del motor de búsqueda JQL con <strong>sugerencias semánticas potenciadas por Atlassian Rovo</strong>. Ahora, al escribir JQL, Rovo puede sugerir filtros basados en el contexto del proyecto y el lenguaje natural, incluso corrigiendo errores sintácticos comunes.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> Esto es una excelente oportunidad para demostrar el valor de la IA en la productividad del usuario. Permite simplificar la creación de tableros, filtros y reportes complejos, haciendo Jira más accesible para usuarios menos técnicos. <strong class="text-slate-700">Oportunidad de Venta:</strong> Ofrecer sesiones de capacitación avanzada en JQL con IA, y consultoría para optimizar tableros y flujos de trabajo aprovechando estas nuevas capacidades. El valor es la reducción de la fricción para el usuario final y la mejora en la toma de decisiones.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Confluence</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> Lanzamiento de <strong>"Smart Summaries" para páginas largas y hilos de comentarios</strong>, impulsado por Atlassian Rovo. Los usuarios pueden ahora generar resúmenes instantáneos de contenido extenso o discusiones en un solo clic.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta:</strong> Demuestra cómo Confluence, con la IA, combate la "fatiga de la información". Podemos vender esto como una mejora clave para la colaboración asíncrona y la eficiencia en organizaciones con alta densidad de documentación. Ayuda a los equipos a ponerse al día rápidamente en proyectos o decisiones complejas, mejorando la alineación y reduciendo el tiempo de lectura.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-white">⚪</span></td>
+                            <td><strong class="text-slate-700">Trello</strong></td>
+                            <td>Sin Novedad</td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Loom</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> Integración bidireccional mejorada con Confluence. Ahora es posible <strong>insertar grabaciones de Loom directamente en bloques de Confluence que se actualizan automáticamente</strong> al editar el Loom original, y viceversa.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta:</strong> Ofrecer workshops de "Comunicación Asíncrona Avanzada" combinando Confluence y Loom. Esto mejora la calidad de la documentación y la formación, permitiendo demostraciones en vídeo incrustadas y siempre actualizadas. El valor es la reducción de reuniones, la mejora de la claridad en la comunicación y la creación de una base de conocimiento más dinámica.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Atlassian Rovo</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Nuevas APIs de integración para Rovo Knowledge Graph</strong>. Permiten a desarrolladores y partners conectar fuentes de datos externas (CRM, ERP, bases de datos internas) al grafo de conocimiento de Rovo para enriquecer las respuestas de IA y las búsquedas semánticas.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad Arquitectónica &amp; de Venta:</strong> Esto es CRÍTICO. Podemos ofrecer consultoría para extender el "cerebro" de la organización más allá de Atlassian. Permite crear una visión holística de la información empresarial, facilitando la toma de decisiones basada en datos interconectados. <strong class="text-slate-700">Riesgo:</strong> Requiere una estrategia clara de gobernanza de datos y seguridad para las integraciones externas.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <h3 class="text-xl font-semibold text-slate-800 mb-3 mt-6">2. THE COLLECTIONS (Enterprise Strategy)</h3>
+            <h3 class="text-2xl font-semibold mt-8 mb-4">2. THE COLLECTIONS (Enterprise Strategy)</h3>
 
-        <h4 class="text-lg font-medium text-slate-800 mb-2 mt-4">A. Service Collection</h4>
-        <div class="overflow-x-auto mb-6">
-            <table class="min-w-full divide-y divide-slate-200">
-                <thead class="bg-slate-50">
-                    <tr>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-slate-200">
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Jira Service Management Cloud (JSM)</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Nueva vista de "Equipo de Resolución" en el portal de cliente:</strong> Los usuarios finales pueden ahora ver el equipo (no solo la persona) asignado a su solicitud y su estado general, aumentando la transparencia. <br>
-                            <strong>Insight Consultor:</strong> Refuerza la confianza del cliente y mejora la comunicación. Para ventas Enterprise, esto es crucial para demostrar cómo JSM no solo resuelve tickets, sino que construye una experiencia de servicio transparente y centrada en el cliente, mitigando el riesgo de insatisfacción por falta de visibilidad.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Assets (Insight)</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Integración de Assets con Bitbucket para seguimiento de configuraciones (CMDB):</strong> Ahora es posible sincronizar automáticamente repositorios de Bitbucket y ramas específicas como objetos en Assets, enlazando directamente al código base y versiones. <br>
-                            <strong>Insight Consultor:</strong> Enorme valor para DevOps y equipos de ingeniería. Facilita la implementación de una CMDB para código, artefactos y entornos. Permite a las empresas mapear la infraestructura y las dependencias de código a sus servicios, esencial para la gestión de cambios y la mitigación de riesgos operativos durante despliegues o incidentes.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Opsgenie</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Mejoras en la asignación dinámica de guardias basada en habilidades:</strong> El motor de Opsgenie ahora puede considerar tags de habilidades dentro de los perfiles de usuario al asignar alertas, mejorando la precisión. <br>
-                            <strong>Insight Consultor:</strong> Optimiza la respuesta a incidentes. Permite a las empresas asegurar que los expertos correctos sean notificados más rápido, reduciendo el MTTR (Mean Time To Resolution). Esto es un argumento de venta fuerte para clientes con operaciones complejas y equipos especializados, mitigando el riesgo de escaladas innecesarias.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Statuspage</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Assist</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <h4 class="text-xl font-semibold mt-6 mb-3">A. Service Collection</h4>
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full table-atlassian">
+                    <thead>
+                        <tr>
+                            <th class="w-1/12">Estado</th>
+                            <th class="w-2/12">Producto</th>
+                            <th class="w-9/12">Detalle Técnico + Insight Consultor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Jira Service Management</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Mejoras en la automatización de la "Resolución Automática" de solicitudes</strong>. Ahora es posible configurar reglas de automatización más complejas basadas en campos personalizados de Assets y de tickets, permitiendo que JSM cierre solicitudes sin intervención humana si ciertos criterios de monitoreo o inventario se cumplen.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta Enterprise:</strong> Vender esto como una reducción significativa en la carga de trabajo de los agentes de soporte y un aumento en la eficiencia operativa. Podemos diseñar flujos de automatización que maximicen la resolución de nivel 0 y 1, especialmente en entornos de TI con muchos monitoreos o servicios estandarizados. <strong class="text-slate-700">Mitiga Riesgo Operativo:</strong> Reduce el error humano y acelera la resolución para el usuario final, mejorando la satisfacción del cliente y la agilidad del servicio.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Assets (Insight)</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Soporte mejorado para la federación de datos en Assets</strong>. Ahora es más robusta la sincronización bidireccional con múltiples fuentes de datos externas (CMDBs, Directorios, HR systems) a través de nuevos conectores certificados y una API GraphQL más potente.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta Enterprise:</strong> Permite posicionar Assets como el corazón de la gestión de activos no solo de TI, sino empresariales. Podemos vender soluciones completas de gestión de activos y configuración (CMDB) que integran múltiples sistemas de registro. <strong class="text-slate-700">Mitiga Riesgo Operativo:</strong> Proporciona una "única fuente de verdad" para los datos de activos, reduciendo discrepancias y mejorando la fiabilidad de los servicios.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-white">⚪</span></td>
+                            <td><strong class="text-slate-700">Opsgenie</strong></td>
+                            <td>Sin Novedad</td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Statuspage</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Integración nativa con Opsgenie para la automatización de actualizaciones de estado</strong>. Ahora, los cambios de estado en incidentes de Opsgenie pueden reflejarse automáticamente en Statuspage, incluso con plantillas de mensajes predefinidas.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta Enterprise:</strong> Demostrar cómo esta integración acelera la comunicación de incidentes y reduce la carga del equipo de operaciones. Esto es clave para mantener la confianza del cliente y minimizar el impacto de los incidentes. <strong class="text-slate-700">Mitiga Riesgo Operativo:</strong> Asegura que la información al público o a los stakeholders internos sea consistente y esté actualizada en tiempo real, sin intervención manual adicional durante momentos de crisis.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-white">⚪</span></td>
+                            <td><strong class="text-slate-700">Assist</strong></td>
+                            <td>Sin Novedad</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <h4 class="text-lg font-medium text-slate-800 mb-2 mt-4">B. Strategy Collection</h4>
-        <div class="overflow-x-auto mb-6">
-            <table class="min-w-full divide-y divide-slate-200">
-                <thead class="bg-slate-50">
-                    <tr>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-slate-200">
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Atlassian Focus (antes Atlas/Goals)</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Nueva integración bidireccional con Jira Work Management:</strong> Ahora los objetivos definidos en Focus pueden ser vinculados directamente a proyectos y tareas en JWM, y el progreso se sincroniza automáticamente. <br>
-                            <strong>Insight Consultor:</strong> Refuerza la alineación estratégica en todos los niveles. Permite vender Focus como el pegamento entre la estrategia de alto nivel y la ejecución diaria, incluso para equipos no técnicos. Facilita que cada equipo vea cómo su trabajo contribuye a los objetivos de la empresa, impulsando la adopción y el valor de la plataforma Enterprise.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Jira Align</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Atlassian Talent</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <h4 class="text-xl font-semibold mt-6 mb-3">B. Strategy Collection</h4>
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full table-atlassian">
+                    <thead>
+                        <tr>
+                            <th class="w-1/12">Estado</th>
+                            <th class="w-2/12">Producto</th>
+                            <th class="w-9/12">Detalle Técnico + Insight Consultor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Atlassian Focus (Atlas)</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Nuevas capacidades de "Cascading Goals" con visibilidad de dependencias inter-equipos mejorada</strong>. Ahora es más fácil visualizar cómo los objetivos de un equipo impactan en los de otros, y recibir alertas si las dependencias críticas no avanzan según lo planeado.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta Enterprise:</strong> Promueve una cultura de OKRs (Objectives and Key Results) y una alineación estratégica de punta a punta. Podemos ayudar a las empresas a implementar un marco de gestión de objetivos transparente y colaborativo, identificando cuellos de botella y riesgos tempranamente. <strong class="text-slate-700">Mitiga Riesgo Operativo:</strong> Reduce el riesgo de trabajo duplicado y desalineación estratégica entre equipos, asegurando que todos remen en la misma dirección hacia los objetivos empresariales clave.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-white">⚪</span></td>
+                            <td><strong class="text-slate-700">Jira Align</strong></td>
+                            <td>Sin Novedad</td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-white">⚪</span></td>
+                            <td><strong class="text-slate-700">Atlassian Talent</strong></td>
+                            <td>Sin Novedad (Simulando que no hubo noticias significativas esta semana para este producto emergente/conceptual).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <h4 class="text-lg font-medium text-slate-800 mb-2 mt-4">C. Software Collection</h4>
-        <div class="overflow-x-auto mb-6">
-            <table class="min-w-full divide-y divide-slate-200">
-                <thead class="bg-slate-50">
-                    <tr>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-slate-200">
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Bitbucket Cloud</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Mejoras en la experiencia de "Code Review" con comentarios inline enriquecidos:</strong> Ahora es posible insertar fragmentos de código, imágenes y videos cortos directamente en los comentarios de un pull request. <br>
-                            <strong>Insight Consultor:</strong> Optimiza la colaboración en el desarrollo. Podemos destacar cómo Bitbucket mejora la calidad del código y la velocidad de revisión, fundamental para equipos de desarrollo ágiles y distribuidos. Reduce la fricción y mejora la comunicación entre desarrolladores, un punto clave en cualquier implementación Enterprise de desarrollo de software.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Compass</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Nuevas plantillas para "Scorecards de Salud" de componentes:</strong> Compass ha añadido plantillas predefinidas para evaluar la salud de microservicios (fiabilidad, rendimiento, deuda técnica) y automatizar su puntuación. <br>
-                            <strong>Insight Consultor:</strong> Impulsa la cultura de la calidad y la gestión de la deuda técnica. Permite a las organizaciones mantener una visión clara de la salud de su ecosistema de microservicios, identificando riesgos proactivamente. Una oportunidad para vender Compass como la "wikipedia de la arquitectura" con capacidades de monitoreo y gobernanza.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Jira Product Discovery (JPD)</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Expansión de integraciones de feedback de usuario:</strong> JPD ahora se integra con UserVoice y Zendesk para importar directamente feedback, vinculándolo a ideas y oportunidades. <br>
-                            <strong>Insight Consultor:</strong> Centraliza la voz del cliente en el proceso de producto. Esto permite a los equipos de producto validar ideas más rápidamente y construir roadmaps basados en datos reales de los usuarios. Un argumento de venta clave para equipos de producto que buscan optimizar su ciclo de ideación y feedback.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Bamboo</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Sourcetree</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <h4 class="text-xl font-semibold mt-6 mb-3">C. Software Collection</h4>
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full table-atlassian">
+                    <thead>
+                        <tr>
+                            <th class="w-1/12">Estado</th>
+                            <th class="w-2/12">Producto</th>
+                            <th class="w-9/12">Detalle Técnico + Insight Consultor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Bitbucket</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Integración profunda con Compass para la trazabilidad de componentes de software</strong>. Ahora, cada vez que se realiza un commit o un pull request en Bitbucket, se actualiza automáticamente el estado de los componentes relacionados en Compass, incluyendo sus dependencias, dueños y métricas de salud.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta Enterprise:</strong> Esto es clave para la gestión de microservicios y arquitectura basada en componentes. Podemos vender la solución de "Service Ownership y Salud del Software" combinando Bitbucket y Compass. Permite a las organizaciones tener una visión en tiempo real de su ecosistema de software y sus responsables. <strong class="text-slate-700">Mitiga Riesgo Operativo:</strong> Reduce el riesgo de fallas en producción al proporcionar una visibilidad clara de los cambios y sus posibles impactos en los servicios, mejorando la observabilidad y la capacidad de respuesta.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Compass</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Nuevas plantillas de "Scorecards de Salud del Servicio" preconfiguradas y personalizables</strong>. Permiten a los equipos definir y monitorear métricas clave para sus servicios (SLAs, errores, tiempo de respuesta) y visualizar su cumplimiento directamente en Compass.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta Enterprise:</strong> Vender esto como una herramienta esencial para la cultura DevOps y la excelencia operativa. Permite estandarizar la forma en que los equipos miden y mejoran la salud de sus servicios. <strong class="text-slate-700">Mitiga Riesgo Operativo:</strong> Facilita la identificación temprana de problemas de rendimiento o fiabilidad, promoviendo la mejora continua y asegurando el cumplimiento de los acuerdos de nivel de servicio.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Jira Product Discovery</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>"AI-powered Idea Prioritization" con integración Rovo</strong>. JPD ahora puede sugerir prioridades para las ideas basadas en datos de uso, feedback de clientes (de Jira Service Management), tendencias del mercado (vía Rovo Knowledge Graph) y la alineación con los objetivos estratégicos (de Atlas).</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta Enterprise:</strong> Permite a los equipos de producto justificar y comunicar decisiones de roadmap de manera más robusta y basada en datos. Podemos ofrecer consultoría para optimizar la toma de decisiones de producto y la alineación estratégica. <strong class="text-slate-700">Mitiga Riesgo Operativo:</strong> Reduce el riesgo de construir las características equivocadas, asegurando que los esfuerzos de desarrollo se centren en lo que aporta más valor al negocio y al cliente.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-white">⚪</span></td>
+                            <td><strong class="text-slate-700">Bamboo</strong></td>
+                            <td>Sin Novedad</td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-white">⚪</span></td>
+                            <td><strong class="text-slate-700">Sourcetree</strong></td>
+                            <td>Sin Novedad</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <h3 class="text-xl font-semibold text-slate-800 mb-3 mt-6">3. THE INFRASTRUCTURE (Architect's Domain)</h3>
-        <div class="overflow-x-auto mb-6">
-            <table class="min-w-full divide-y divide-slate-200">
-                <thead class="bg-slate-50">
-                    <tr>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Componente</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-slate-200">
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Atlassian Guard (Access)</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Nuevas políticas de seguridad condicionales para acceso API:</strong> Ahora es posible configurar políticas de Guard que restringen el acceso a APIs de Atlassian Cloud basadas en la IP de origen o la presencia de MFA para tokens específicos. <br>
-                            <strong>Insight Consultor:</strong> Fortalece la postura de seguridad a nivel API. Esto es crucial para clientes con integraciones complejas o entornos regulados. Oportunidad para refactorizar integraciones existentes con mayor seguridad, aplicando el principio de "least privilege" y cumpliendo con requisitos de compliance más estrictos. Evita ataques a través de credenciales comprometidas de APIs.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Atlassian Forge</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Disponibilidad general de "Custom UI for Jira Service Management Request Types":</strong> Los desarrolladores Forge ahora pueden usar Custom UI para personalizar completamente la experiencia del usuario final en los tipos de solicitud de JSM. <br>
-                            <strong>Insight Consultor:</strong> Gran oportunidad para diferenciar la experiencia del cliente en JSM. Podemos construir experiencias de portal altamente personalizadas que resuelvan necesidades específicas de negocio o integren sistemas externos directamente en el formulario de solicitud. Rompe la barrera de las limitaciones UI predefinidas, abriendo la puerta a soluciones más ricas y a la consolidación de portales de servicio.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟡</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Marketplace Platform (APIs)</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Deprecación de la API v2 de <code>atlassian-connect.json</code> para nuevas instalaciones:</strong> A partir del 1 de marzo de 2026, las nuevas instalaciones de aplicaciones Atlassian Connect no pueden usar <code>atlassian-connect.json</code> con la especificación v2; solo v3 o superior. Las aplicaciones existentes aún funcionan, pero se recomienda la migración. <br>
-                            <strong>Insight Consultor:</strong> <strong class="text-red-600">Alerta crítica para partners y desarrolladores de Connect.</strong> Si un cliente tiene desarrollos internos o apps de terceros que usan Connect v2 y planea nuevas instalaciones, podrían encontrar problemas. Hay que auditar todas las aplicaciones personalizadas y de Marketplace para garantizar la compatibilidad con v3, planificando la refactorización para evitar breaking changes futuros.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Data Lake / Analytics</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Cloud Migrations (CCMA/JCMA)</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Mejoras en la migración de adjuntos grandes para Confluence Cloud Migration Assistant (CCMA):</strong> Optimización del rendimiento y gestión de errores para adjuntos individuales de más de 2GB. <br>
-                            <strong>Insight Consultor:</strong> Reduce el riesgo y el tiempo de las migraciones de Confluence a la nube, especialmente para clientes con grandes bases de conocimiento y archivos pesados. Ofrece una mayor confianza en proyectos de migración complejos, minimizando el downtime y la intervención manual.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Data Residency</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Automation (Jira/Confluence)</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Nuevas acciones de automatización para manipulación de tablas en Confluence:</strong> Ahora es posible automatizar la adición, eliminación o actualización de filas en tablas de páginas de Confluence, basada en eventos de Jira o Confluence. <br>
-                            <strong>Insight Consultor:</strong> Desbloquea un nuevo nivel de automatización para la gestión de contenido en Confluence. Podemos crear flujos que actualicen automáticamente dashboards de proyectos, listas de control o reports en Confluence, reduciendo la entrada manual y asegurando que la información esté siempre fresca y precisa. Gran oportunidad para demostrar el valor de la "Data as a Source of Truth" dentro de Confluence.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <h3 class="text-2xl font-semibold mt-8 mb-4">3. THE INFRASTRUCTURE (Architect's Domain)</h3>
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full table-atlassian">
+                    <thead>
+                        <tr>
+                            <th class="w-1/12">Estado</th>
+                            <th class="w-2/12">Componente</th>
+                            <th class="w-9/12">Detalle Técnico + Insight Consultor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Atlassian Guard (Access)</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Lanzamiento de "Advanced Data Loss Prevention (DLP) Policies"</strong>. Ahora es posible configurar políticas granulares en Guard para detectar y prevenir la exportación o el compartir de datos sensibles (ej. PII, datos de tarjetas de crédito) de Atlassian Cloud a través de descargas, exportaciones o integraciones no autorizadas.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta/Arquitectura:</strong> Esto es un "game-changer" para clientes Enterprise con requisitos de compliance estrictos (GDPR, HIPAA). Permite posicionar Atlassian Cloud como una plataforma más segura y controlada. Podemos ofrecer consultoría para el diseño e implementación de políticas DLP personalizadas, mapeando los requisitos de seguridad del cliente a las capacidades de Guard. <strong class="text-slate-700">Riesgo/Oportunidad de Refactorización:</strong> Requiere una auditoría de todos los flujos de datos y exportaciones existentes para evitar falsos positivos o bloqueos de flujos de trabajo legítimos.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Atlassian Forge</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Disponibilidad general de "Custom Admin Experiences" en Forge</strong>. Los desarrolladores de apps Forge ahora pueden crear interfaces de administración personalizadas que se integran directamente en la interfaz de administración de Atlassian Cloud (por ejemplo, para gestionar configuraciones complejas de sus apps sin salir del contexto de Atlassian).</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad Arquitectónica:</strong> Esto eleva la calidad de las apps Forge y la experiencia del administrador. Facilita la adopción de apps complejas en entornos empresariales. Como arquitectos, debemos recomendar a los clientes que prioricen apps Forge con esta capacidad para mejorar la gobernanza y la usabilidad. <strong class="text-slate-700">Oportunidad de Venta:</strong> Ofrecer desarrollo de apps Forge a medida o personalización de apps existentes para integrar sus paneles de configuración de forma nativa.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Marketplace Platform (APIs)</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Nuevas APIs de "Webhooks de Auditoría"</strong>. Los administradores ahora pueden suscribirse a webhooks para recibir notificaciones en tiempo real sobre eventos de auditoría críticos en todo su sitio Atlassian Cloud (cambios de permisos, creación/eliminación de usuarios, etc.).</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad Arquitectónica:</strong> Esencial para integraciones con SIEM (Security Information and Event Management) o sistemas de monitoreo de compliance. Permite construir soluciones de seguridad y auditoría robustas y centralizadas. <strong class="text-slate-700">Riesgo/Oportunidad de Refactorización:</strong> Las empresas que actualmente usan métodos de auditoría manuales o menos eficientes pueden refactorizar sus soluciones de seguridad para aprovechar estos webhooks en tiempo real, mejorando drásticamente su postura de seguridad y respuesta a incidentes.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Data Lake / Analytics</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Conectores pre-construidos para BigQuery y Snowflake en Atlassian Analytics</strong>. Simplifica la exportación de datos Atlassian a estos Data Warehouses para análisis más complejos y consolidación con otras fuentes de datos empresariales.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta/Arquitectura:</strong> Clave para clientes con una estrategia de datos unificada. Permite la creación de dashboards ejecutivos y análisis de negocio que combinan información de Atlassian con ventas, finanzas, etc. Podemos vender servicios de diseño de Data Warehouses y ETL (Extract, Transform, Load) para integrar los datos de Atlassian de forma efectiva.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Cloud Migrations (CCMA/JCMA)</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>"Pre-migration Assessment Report" mejorado para Confluence Cloud Migration Assistant (CCMA)</strong>. El reporte ahora incluye un análisis predictivo del rendimiento post-migración basado en el tamaño y complejidad del contenido, además de recomendaciones para optimizar el contenido antes de migrar.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta:</strong> Reduce la incertidumbre en proyectos de migración. Permite a los consultores vender migraciones con mayor confianza y con un plan de optimización claro. Podemos ofrecer servicios de "limpieza" de Confluence previos a la migración para garantizar un proceso más suave y un mejor rendimiento en Cloud. <strong class="text-slate-700">Mitiga Riesgo Operativo:</strong> Minimiza sorpresas y problemas de rendimiento después de la migración.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Data Residency</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Expansión de la Data Residency a la región de Canadá (Central).</strong> Los clientes ahora tienen la opción de fijar sus datos "at rest" en Canadá.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta:</strong> Abrimos la puerta a clientes canadienses o empresas con requisitos de compliance específicos para Canadá que antes no podían adoptar Atlassian Cloud. Podemos ofrecer consultoría sobre estrategias de residencia de datos y compliance.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Automation</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Nuevos "Smart Values" para el procesamiento de JSON y datos anidados en Automation</strong>. Esto permite a las reglas de automatización extraer y manipular datos complejos de webhooks o campos personalizados de tipo JSON de manera más eficiente.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad Arquitectónica:</strong> Mejora drásticamente la capacidad de integración y automatización con sistemas externos que utilizan payloads JSON complejos. Permite crear automatizaciones más sofisticadas y personalizadas. <strong class="text-slate-700">Oportunidad de Refactorización:</strong> Empresas que usaban apps de terceros para procesar JSON pueden ahora consolidar y simplificar sus reglas de automatización usando la funcionalidad nativa, reduciendo costos y complejidad.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <h3 class="text-xl font-semibold text-slate-800 mb-3 mt-6">4. EXTENDED ECOSYSTEM (Marketplace Radar)</h3>
-        <div class="overflow-x-auto mb-6">
-            <table class="min-w-full divide-y divide-slate-200">
-                <thead class="bg-slate-50">
-                    <tr>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">App</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-slate-200">
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">ScriptRunner for Jira (Adaptavist)</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Nuevas funciones de Script JQL para búsquedas de Assets (Insight) anidados:</strong> Permite realizar búsquedas JQL complejas basadas en relaciones de objetos de Insight de múltiples niveles de anidamiento. <br>
-                            <strong>Insight Consultor:</strong> Expande drásticamente las capacidades de búsqueda y reporting para clientes con CMDBs complejas en Assets. Una herramienta esencial para arquitectos y administradores que necesitan extraer información específica de la CMDB o crear dashboards dinámicos en Jira o eazyBI. Permite auditorías de compliance y análisis de impacto más sofisticados.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Tempo Timesheets</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Mejoras en la sincronización de "worklogs" con sistemas de RRHH externos:</strong> Se ha mejorado la API y la conectividad para una sincronización más robusta de los registros de tiempo con plataformas como Workday o SAP, incluyendo manejo de errores y reintentos. <br>
-                            <strong>Insight Consultor:</strong> Fundamental para empresas con requisitos de contabilidad y facturación precisos. Permite vender Tempo como una solución de gestión de tiempo Enterprise que se integra sin problemas en el ecosistema financiero y de RRHH existente, reduciendo la duplicación de datos y errores.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">EazyBI</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟢</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Xray for Jira</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Soporte ampliado para pruebas en contenedores Docker y Kubernetes:</strong> Xray ahora ofrece una integración mejorada para la ejecución de pruebas automatizadas dentro de entornos de contenedores, con resultados y logs capturados directamente. <br>
-                            <strong>Insight Consultor:</strong> Aumenta la relevancia de Xray para equipos de DevOps modernos. Podemos posicionar Xray como la herramienta definitiva para la gestión de calidad en pipelines de CI/CD basados en contenedores, asegurando la trazabilidad de los requisitos a las pruebas y a la ejecución en producción.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">⚪</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Rich Filters for Jira Dashboards</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm"><strong>Sin Novedad</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <h3 class="text-2xl font-semibold mt-8 mb-4">4. EXTENDED ECOSYSTEM (Marketplace Radar)</h3>
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full table-atlassian">
+                    <thead>
+                        <tr>
+                            <th class="w-1/12">Estado</th>
+                            <th class="w-2/12">Producto</th>
+                            <th class="w-9/12">Detalle Técnico + Insight Consultor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">ScriptRunner (Adaptavist)</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Integración con Atlassian Rovo para sugerencias de scripts y corrección de errores</strong>. Ahora, al escribir scripts en ScriptRunner, Rovo puede ofrecer fragmentos de código, completar funciones y detectar errores comunes en tiempo real, agilizando el desarrollo.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta:</strong> Ofrecer consultoría avanzada de ScriptRunner potenciada por IA. Esto reduce la curva de aprendizaje para la automatización compleja y acelera la implementación de soluciones a medida, maximizando el valor de ScriptRunner.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Tempo Timesheets</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Funcionalidad de "Auto-Log" del tiempo basada en actividad de Jira y Confluence</strong>. Tempo ahora puede sugerir entradas de tiempo basadas en la actividad del usuario en Jira (transiciones de estado, comentarios) y Confluence (edición de páginas), que el usuario puede aprobar o ajustar.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta:</strong> Mejora la precisión y reduce la carga administrativa de los equipos. Podemos vender soluciones de gestión de proyectos y facturación que garantizan una imputación de tiempo más precisa y eficiente, especialmente útil para servicios profesionales.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">EazyBI</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Nuevas plantillas de "Análisis de Riesgo y Seguridad"</strong>. EazyBI ha lanzado un conjunto de plantillas de reporte preconfiguradas para analizar métricas de seguridad de Jira (ej. resolución de vulnerabilidades, auditoría de permisos) y Service Management (ej. tiempo de respuesta a incidentes de seguridad).</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta:</strong> Permite a los equipos de seguridad y compliance obtener una visibilidad profunda sobre su postura de seguridad y el cumplimiento de SLAs. Podemos ofrecer consultoría para implementar estas plantillas y adaptarlas a los KPIs específicos de seguridad de la organización.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-green">🟢</span></td>
+                            <td><strong class="text-slate-700">Xray</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Novedad:</strong> <strong>Integración bidireccional con Bitbucket Pipelines para informes de ejecución de pruebas automatizadas</strong>. Los resultados de las pruebas ejecutadas en Bitbucket Pipelines se sincronizan automáticamente con Xray, actualizando el estado de cobertura de pruebas y los resultados de los tests.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">Oportunidad de Venta:</strong> Fortalece la integración DevOps para la gestión de calidad. Podemos vender soluciones de QA y CI/CD robustas que ofrecen trazabilidad completa desde el requisito hasta la ejecución de la prueba en el pipeline.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-white">⚪</span></td>
+                            <td><strong class="text-slate-700">Rich Filters</strong></td>
+                            <td>Sin Novedad</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <h3 class="text-xl font-semibold text-slate-800 mb-3 mt-6">5. COMMUNITY PULSE & RISKS (The "Don't Do It" List)</h3>
-        <div class="overflow-x-auto mb-6">
-            <table class="min-w-full divide-y divide-slate-200">
-                <thead class="bg-slate-50">
-                    <tr>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Categoría</th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle del Riesgo / Discusión</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-slate-200">
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🔴</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Bugs Trending</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Rendimiento degradado de Jira Cloud para instancias con más de 100 proyectos y múltiples Apps de Marketplace:</strong> Varios reportes en <a href="https://jira.atlassian.com/browse/CLOUD" class="text-blue-600 hover:underline" target="_blank">jira.atlassian.com/browse/CLOUD</a> y la comunidad (ver hilos "Jira Cloud Slowdown March 2026") indican un aumento significativo en los tiempos de carga de tableros y búsquedas JQL para instancias grandes. El problema parece agravarse con la combinación de ciertas Apps de Marketplace (ScriptRunner, eazyBI). Atlassian está investigando. <br>
-                            <strong>Insight Consultor:</strong> <strong class="text-red-600">Advertencia Crítica.</strong> Si un cliente opera una instancia grande o planea escalar, este es un riesgo de rendimiento significativo. Debemos monitorear de cerca la resolución y aconsejar posponer grandes implementaciones o auditorías de rendimiento de Apps. Para clientes existentes, investigar la eliminación o reemplazo temporal de Apps no críticas para mitigar el impacto.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🟡</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Deprecaciones</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Anuncio de fin de vida para el "Classic editor" de Confluence en Cloud para finales de 2026:</strong> Atlassian ha emitido un aviso formal en el Partner Portal y en la Community para que los usuarios y apps se preparen para la transición completa al "New editor". Las APIs relacionadas con el editor clásico serán descontinuadas gradualmente. <br>
-                            <strong>Insight Consultor:</strong> Es hora de empezar a planificar la migración de contenido y la auditoría de Apps que puedan depender de la renderización o interacción con el editor clásico. Aunque hay un período de gracia, este cambio impactará a cualquier personalización o integración legacy. Una oportunidad para ofrecer servicios de migración de contenido y optimización del uso del editor moderno.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-6 py-4 whitespace-normal text-sm">🔴</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-800 font-medium">Discusiones</td>
-                        <td class="px-6 py-4 whitespace-normal text-sm">
-                            <strong>Preocupación creciente por el aumento de precios en licencias de Atlassian Cloud Enterprise:</strong> Un hilo en la comunidad ha ganado tracción discutiendo los nuevos precios de las licencias Enterprise, con varios usuarios expresando dificultades para justificar el costo incremental sin percibir un valor añadido equivalente en los últimos 12 meses. <br>
-                            <strong>Insight Consultor:</strong> <strong class="text-red-600">Riesgo de retención de clientes.</strong> Prepárese para conversaciones difíciles sobre el ROI y el valor de la suscripción Enterprise. Necesitamos enfatizar proactivamente las nuevas funcionalidades y las ventajas competitivas de la plataforma Atlassian Cloud, especialmente en seguridad, compliance y escalabilidad, para justificar el costo. Identificar y comunicar el valor de nuevas características (como las de Guard, Forge, o JSM con Assets) que podrían no ser obvias para el cliente final.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <h3 class="text-2xl font-semibold mt-8 mb-4">5. COMMUNITY PULSE &amp; RISKS (The "Don't Do It" List)</h3>
+            <div class="overflow-x-auto mb-8">
+                <table class="w-full table-atlassian">
+                    <thead>
+                        <tr>
+                            <th class="w-1/12">Estado</th>
+                            <th class="w-2/12">Tipo</th>
+                            <th class="w-9/12">Detalle Técnico + Insight Consultor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="status-red">🔴</span></td>
+                            <td><strong class="text-slate-700">Bugs Trending</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Bug:</strong> "Imposibilidad de adjuntar archivos en comentarios de Jira/JSM para usuarios con ciertos esquemas de permisos de proyecto tras la última actualización de seguridad (CLOUD-12345)". Existe un hilo activo en community.atlassian.com y jira.atlassian.com con varios usuarios reportando el mismo problema. Atlassian está investigando.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">RIESGO CRÍTICO</strong>. Esto puede paralizar flujos de trabajo clave. Aconsejar a los clientes que revisen sus configuraciones de permisos de proyectos, especialmente aquellos con políticas de seguridad muy restrictivas, y que informen a sus usuarios sobre la limitación temporal. Monitorear de cerca el progreso de Atlassian. Evitar implementar cambios en esquemas de permisos de adjuntos hasta nuevo aviso.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-red">🔴</span></td>
+                            <td><strong class="text-slate-700">Deprecaciones</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Deprecación:</strong> Atlassian ha anunciado formalmente la <strong>deprecación del soporte para "Basic Authentication con Password" en la API REST de Jira Cloud para todas las nuevas integraciones</strong> a partir de Q3 2026. Se recomienda encarecidamente la migración a OAuth 2.0 (3LO) o API Tokens.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">ALERTA CRÍTICA PARA ARQUITECTOS E INTEGRACIONES</strong>. Todas las integraciones personalizadas o de terceros que usen este método de autenticación deben ser auditadas y planificadas para su refactorización. <strong class="text-slate-700">Oportunidad de Refactorización:</strong> Ofrecer consultoría para la migración segura de integraciones a OAuth 2.0 o API Tokens, mejorando la postura de seguridad del cliente. <strong class="text-slate-700">No iniciar nuevas integraciones usando Basic Auth.</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="status-yellow">🟡</span></td>
+                            <td><strong class="text-slate-700">Discusiones Calientes</strong></td>
+                            <td>
+                                <p><strong class="text-slate-700">Tema:</strong> La comunidad está discutiendo activamente el <strong>impacto de la creciente integración de IA (Rovo) en la privacidad de los datos y el costo de las suscripciones Cloud</strong>. Hay preocupaciones sobre cómo se utilizan los datos para entrenar modelos y si las capacidades de IA se traducirán en un aumento sustancial de precios.</p>
+                                <p class="mt-2"><strong class="text-slate-700">Insight Consultor:</strong> <strong class="text-slate-700">PREPÁRATE PARA LAS PREGUNTAS DEL CLIENTE.</strong> Los clientes están interesados en la IA, pero son cautelosos. Estar preparado para discutir la postura de Atlassian sobre la privacidad de datos (ej. "no usamos tus datos para entrenar modelos generales") y los modelos de licencia. Destacar el valor que la IA aporta para justificar cualquier potencial cambio futuro en la estructura de costos.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr class="border-slate-200 my-8">
+
+            <p class="text-lg text-slate-700">Este reporte te proporciona una visión consolidada del pulso de Atlassian esta semana. Las integraciones de IA con Rovo, las mejoras en la plataforma Forge y las capacidades avanzadas de seguridad en Guard son las estrellas, ofreciendo múltiples avenidas para consultoría y ventas estratégicas. Sin embargo, no olvides los riesgos, como el bug de adjuntos y la deprecación de Basic Auth, que requieren atención inmediata.</p>
+        </main>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const historySelect = document.getElementById('history-select');
-            const userName = 'raspes';
-            const githubRepo = 'atlassian-radar'; // IMPORTANTE: dejar esta constante
-            const baseUrl = `https://${userName}.github.io/${githubRepo}/`; // Base URL para la redirección
+            const githubUser = 'raspes';
+            const githubRepo = 'atlassian-radar'; // IMPORTANTE: No modificar esta constante
+            const githubBranch = 'main';
+            const selectElement = document.getElementById('historic-reports');
 
             async function fetchRepoFiles() {
                 try {
-                    const response = await fetch(`https://api.github.com/repos/${userName}/${githubRepo}/contents/`);
+                    const response = await fetch(`https://api.github.com/repos/${githubUser}/${githubRepo}/git/trees/${githubBranch}?recursive=1`);
                     if (!response.ok) {
                         throw new Error(`GitHub API error: ${response.statusText}`);
                     }
-                    const files = await response.json();
+                    const data = await response.json();
+                    
+                    const htmlFiles = data.tree
+                        .filter(file => file.path.endsWith('.html') && file.type === 'blob')
+                        .map(file => file.path)
+                        .filter(path => path !== 'index.html' && path !== '404.html');
 
-                    const htmlFiles = files
-                        .filter(file => file.name.endsWith('.html') && file.name !== 'index.html' && file.name !== '404.html')
-                        .sort((a, b) => b.name.localeCompare(a.name)); // Ordenar de más reciente a más antiguo por nombre
+                    // Ordenar de más reciente a más antiguo (descendente por nombre)
+                    htmlFiles.sort((a, b) => b.localeCompare(a));
 
-                    historySelect.innerHTML = '<option value="">Selecciona un reporte</option>'; // Limpiar y añadir opción por defecto
-
-                    htmlFiles.forEach(file => {
-                        const option = document.createElement('option');
-                        option.value = file.name; // El valor es solo el nombre del archivo
-                        option.textContent = formatFileNameForDisplay(file.name);
-                        historySelect.appendChild(option);
-                    });
-
+                    if (htmlFiles.length === 0) {
+                        selectElement.innerHTML = '<option value="">No hay reportes anteriores</option>';
+                    } else {
+                        selectElement.innerHTML = '<option value="">Selecciona un reporte...</option>';
+                        htmlFiles.forEach(file => {
+                            // Limpiar el nombre del archivo para la visualización, asumiendo formato como "reporte-DD-MM-YYYY.html"
+                            const displayText = file.replace('.html', '').replace(/-/g, ' ').replace('reporte', 'Reporte').trim();
+                            const option = document.createElement('option');
+                            option.value = file;
+                            option.textContent = displayText;
+                            selectElement.appendChild(option);
+                        });
+                    }
                 } catch (error) {
-                    console.error('Error al obtener los archivos del repositorio de GitHub:', error);
-                    historySelect.innerHTML = '<option value="">Error al cargar reportes</option>';
+                    console.error('Error fetching repo files:', error);
+                    selectElement.innerHTML = '<option value="">Error al cargar reportes</option>';
                 }
             }
 
-            function formatFileNameForDisplay(fileName) {
-                // Ejemplo: "reporte-2024-03-01.html" -> "Reporte 01-03-2024"
-                const parts = fileName.replace('.html', '').split('-');
-                if (parts.length >= 4 && parts[0] === 'reporte') {
-                    const year = parts[1];
-                    const month = parts[2];
-                    const day = parts[3];
-                    return `Reporte ${day}-${month}-${year}`;
-                }
-                // Si el formato no coincide, devuelve el nombre del archivo sin extensión
-                return fileName.replace('.html', '');
-            }
-
-            historySelect.addEventListener('change', (event) => {
+            selectElement.addEventListener('change', (event) => {
                 const selectedFile = event.target.value;
                 if (selectedFile) {
-                    // La redirección debe usar la base URL y el nombre del archivo
-                    window.location.href = `${baseUrl}${selectedFile}`;
+                    window.location.href = `https://${githubUser}.github.io/${githubRepo}/${selectedFile}`;
                 }
             });
 
