@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Inteligencia Atlassian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-600">
+
+    <div class="max-w-4xl mx-auto px-4 py-6">
+        <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 mb-6">
+            <label for="report-selector" class="block text-sm font-medium text-slate-700 mb-2">Seleccionar otro reporte:</label>
+            <select id="report-selector" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm">
+                <option value="" disabled selected>Cargando reportes...</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 py-8 bg-white rounded-lg shadow-md border border-slate-200">
+        <h2 class="text-3xl font-bold text-slate-800 mb-6 border-b border-slate-200 pb-4">Reporte de Inteligencia Atlassian - Radar del Arquitecto Maestro</h2>
+
+        <p class="mb-4"><strong>Periodo del Reporte:</strong> 7 de Mayo de 2026 - 14 de Mayo de 2026</p>
+        <p class="mb-6"><strong>Rol:</strong> Atlassian Master Architect Radar</p>
+        <p class="mb-8"><strong>Objetivo:</strong> Auditoría del ecosistema, detección de cambios técnicos y traducción en oportunidades de venta, riesgos o consejos de arquitectura.</p>
+
+        <hr class="mb-8 border-slate-200">
+
+        <h3 class="text-2xl font-semibold text-slate-800 mb-4">1. THE PRODUCTS (User & Collab)</h3>
+
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full divide-y divide-slate-200 rounded-lg">
+                <thead class="bg-slate-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-slate-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                                🟢
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Jira Work Management (JWM)
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>Atlassian Intelligence (AI) integrado:</strong> Las características de IA generativa están comenzando a aparecer en JWM. Esto incluye resúmenes de proyectos, creación de descripciones de tareas y asistencia en la generación de informes.
+                            <br>
+                            <strong>Insight Consultor:</strong> Oportunidad clave para mostrar a los clientes cómo JWM puede mejorar la productividad del equipo no-TI. La IA puede reducir la fricción en la adopción y en la gestión de tareas, especialmente para usuarios menos técnicos. Sugerir casos de uso para marketing, HR o finanzas. Potencial de upsell a licencias de JWM si ya usan Jira Software.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">
+                                🟡
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Confluence
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>Nuevas plantillas de "brainstorming" y "meeting notes" con IA:</strong> Atlassian está expandiendo el uso de IA para facilitar la creación de contenido y la captura de información. La AI está siendo utilizada para estructurar reuniones, generar actas y ayudar en la ideación.
+                            <br>
+                            <strong>Insight Consultor:</strong> Demostrar cómo Confluence, potenciado por IA, puede ser el "cerebro" central de la organización. Destacar la capacidad de reducir el tiempo en la creación de documentos y en la síntesis de información. Esto es un fuerte argumento para la adopción en equipos que luchan con la documentación y la gestión del conocimiento. Resaltar la eficiencia en la preparación y seguimiento de reuniones.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                                🟢
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Atlas (Work Graph)
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>Integración más profunda con herramientas de chat:</strong> Se está observando una mejora en la capacidad de Atlas para reflejar el estado del trabajo y los objetivos directamente en herramientas como Slack o Microsoft Teams, con actualizaciones automáticas y resúmenes impulsados por IA.
+                            <br>
+                            <strong>Insight Consultor:</strong> Posicionar Atlas como la solución para la visibilidad empresarial a nivel ejecutivo y de portfolio. Enfatizar cómo unifica la información de diferentes herramientas y la presenta de manera digerible a través de la IA, especialmente útil para gerentes y líderes que necesitan una visión rápida del progreso y los bloqueos.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                                🔵
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Trello
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>Automatizaciones de IA para tableros y tarjetas:</strong> Nuevas funciones de IA para sugerir movimientos de tarjetas, crear checklists basados en descripciones de tareas, y generar resúmenes de tableros.
+                            <br>
+                            <strong>Insight Consultor:</strong> Trello se vuelve aún más potente para la gestión visual de proyectos y flujos de trabajo ligeros. La IA reduce la carga manual y mejora la organización. Ideal para equipos ágiles pequeños o para gestión de campañas de marketing. Puede ser un punto de entrada para clientes que luego escalen a Jira o JWM.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-2xl font-semibold text-slate-800 mb-4">2. IT TEAMS (ITSM)</h3>
+
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full divide-y divide-slate-200">
+                <thead class="bg-slate-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-slate-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">
+                                🟡
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Jira Service Management (JSM)
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>IA para autoconfiguración de servicios y detección de anomalías:</strong> La IA está empezando a ayudar a los administradores a configurar portales de servicio más rápidamente y a identificar patrones inusuales en los logs y el rendimiento.
+                            <br>
+                            <strong>Insight Consultor:</strong> El enfoque de Atlassian en la IA para JSM reduce la complejidad de la gestión de servicios y la resolución proactiva de problemas. Esto es un diferenciador clave contra otras herramientas ITSM, permitiendo a los equipos de TI ser más eficientes y enfocarse en iniciativas estratégicas. Argumento fuerte para la modernización de la mesa de servicio.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                                🟢
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Opsgenie
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>Optimización de la IA para la ruta de escalamiento:</strong> La IA se está utilizando para predecir los mejores contactos para una alerta basándose en patrones históricos, disponibilidad y especialización, reduciendo el "time to acknowledge" y el "mean time to resolution".
+                            <br>
+                            <strong>Insight Consultor:</strong> Resaltar la capacidad de Opsgenie para minimizar el impacto de los incidentes críticos. La IA lo convierte en una herramienta indispensable para equipos DevOps y SRE que buscan máxima eficiencia en la gestión de incidentes y garantizar la continuidad del negocio.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                                🔵
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Statuspage
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>Generación de actualizaciones de incidentes con IA:</strong> La IA puede ayudar a redactar borradores de comunicaciones de estado, resúmenes de post-mortem y actualizaciones en tiempo real, manteniendo a los stakeholders informados de manera proactiva.
+                            <br>
+                            <strong>Insight Consultor:</strong> Mejora la transparencia y la confianza del cliente durante las interrupciones del servicio. La IA en Statuspage facilita la comunicación rápida y precisa, algo crítico para la gestión de la reputación.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-2xl font-semibold text-slate-800 mb-4">3. SOFTWARE TEAMS (Dev & DevOps)</h3>
+
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full divide-y divide-slate-200">
+                <thead class="bg-slate-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-slate-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                                🟢
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Jira Software
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>IA para autogeneración de épicas y requisitos:</strong> La IA puede ahora tomar descripciones de alto nivel y sugerir épicas, historias de usuario y criterios de aceptación, reduciendo la carga de trabajo de los Product Owners y Business Analysts. También se están viendo resúmenes de comentarios y generación de test cases.
+                            <br>
+                            <strong>Insight Consultor:</strong> Posicionar Jira Software con IA como una herramienta que acelera el ciclo de desarrollo desde la concepción hasta la entrega. Permite a los equipos de desarrollo enfocarse más en la codificación y menos en la documentación repetitiva. Destacar su capacidad para escalar prácticas ágiles y DevOps.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                                🟢
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Bitbucket
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>IA para revisión de código y sugerencia de optimizaciones:</strong> La IA asiste en la identificación de patrones de código problemáticos, vulnerabilidades de seguridad y sugerencias de refactorización durante las pull requests.
+                            <br>
+                            <strong>Insight Consultor:</strong> Bitbucket se está convirtiendo en un "copiloto" inteligente para los desarrolladores, mejorando la calidad del código y la seguridad desde las primeras etapas del desarrollo. Esto es un fuerte argumento para equipos que buscan mejorar sus prácticas de DevSecOps y la eficiencia en la revisión de código.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">
+                                🟡
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Compass
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>IA para análisis de salud de componentes y microservicios:</strong> La IA puede analizar métricas de rendimiento y dependencias para ofrecer una visión predictiva sobre la salud de los servicios y sugerir acciones proactivas.
+                            <br>
+                            <strong>Insight Consultor:</strong> Crucial para organizaciones con arquitecturas de microservicios. Compass, potenciado por IA, proporciona una "observabilidad" a nivel de servicio que permite a los equipos mantener la calidad y la fiabilidad de sus sistemas, identificando posibles cuellos de botella antes de que se conviertan en incidentes.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                                🔵
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Bamboo
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>IA para optimización de pipelines CI/CD:</strong> La IA puede analizar el historial de ejecución de builds y deployments para sugerir optimizaciones en la configuración de pipelines, identificar cuellos de botella y predecir fallos.
+                            <br>
+                            <strong>Insight Consultor:</strong> Bamboo sigue siendo una opción robusta para CI/CD autoalojado. Con la IA, puede ofrecer eficiencias aún mayores en la velocidad y fiabilidad de los deployments. Útil para clientes con requisitos de seguridad y control de datos muy estrictos que prefieren soluciones on-premise o autogestionadas.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-2xl font-semibold text-slate-800 mb-4">4. ENTERPRISE & PLATFORM</h3>
+
+        <div class="overflow-x-auto mb-8">
+            <table class="min-w-full divide-y divide-slate-200">
+                <thead class="bg-slate-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Estado</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Producto</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Detalle Técnico + Insight Consultor</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-slate-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">
+                                🟡
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Atlassian Access
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>IA para detección de anomalías de seguridad y gestión de políticas:</strong> La IA está siendo utilizada para identificar patrones de acceso inusuales y sugerir ajustes en las políticas de seguridad para mejorar la postura de cumplimiento.
+                            <br>
+                            <strong>Insight Consultor:</strong> Para grandes empresas, Atlassian Access con IA es fundamental para la gestión de la identidad y el acceso, ofreciendo una capa de seguridad inteligente que protege los datos y cumple con las normativas. Clave para la migración a la nube y para garantizar la seguridad en entornos distribuidos.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                                🟢
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Atlassian Analytics
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>Consultas de lenguaje natural y detección de tendencias con IA:</strong> Los usuarios pueden hacer preguntas en lenguaje natural para obtener insights y la IA puede identificar automáticamente tendencias y anomalías en los datos de uso de Atlassian.
+                            <br>
+                            <strong>Insight Consultor:</strong> Permite a las empresas maximizar el valor de sus inversiones en Atlassian al proporcionar insights accionables sobre el uso y el rendimiento. La IA facilita el acceso a estos datos para usuarios no técnicos, impulsando la toma de decisiones basada en datos.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-normal text-sm font-medium text-slate-900">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                                🔵
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-900">
+                            Atlassian Marketplace
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal text-sm text-slate-600">
+                            <strong>Recomendaciones personalizadas de apps con IA:</strong> La IA está mejorando las recomendaciones de extensiones y aplicaciones basándose en el uso del cliente, el perfil de la empresa y las tendencias de la industria.
+                            <br>
+                            <strong>Insight Consultor:</strong> Ayuda a los clientes a descubrir y adoptar las herramientas adecuadas para sus necesidades específicas, aumentando el valor y la personalización de su stack Atlassian. Facilita la identificación de soluciones complementarias que pueden resolver problemas complejos.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-2xl font-semibold text-slate-800 mb-4">5. CONSIDERACIONES CLAVE Y RIESGOS</h3>
+
+        <ul class="list-disc pl-5 space-y-2 mb-8 text-slate-600">
+            <li>
+                <strong>Privacidad de Datos y IA:</strong> A medida que la IA se integra más profundamente, la gestión de datos sensibles y la confianza del cliente se vuelven críticas. Es esencial entender cómo Atlassian maneja los datos y si los clientes pueden optar por no participar en el uso de IA con sus datos.
+                <br>
+                <span class="text-sm text-slate-500 italic">Insight Consultor:</span> Siempre preguntar al cliente sobre sus políticas de privacidad y datos. Atlassian tiene fuertes compromisos, pero la percepción del cliente es clave.
+            </li>
+            <li>
+                <strong>Costo de la IA:</strong> Algunas funcionalidades avanzadas de IA podrían venir con costos adicionales o requerir planes de suscripción específicos.
+                <br>
+                <span class="text-sm text-slate-500 italic">Insight Consultor:</span> Evaluar el ROI de las características de IA para el cliente. No todas las funciones de IA son necesarias para todos los clientes y es importante justificar el costo.
+            </li>
+            <li>
+                <strong>Sobrecarga de Información:</strong> Con tanta automatización y generación de contenido, existe el riesgo de que los usuarios se sientan abrumados o se vuelvan dependientes de la IA sin desarrollar sus propias habilidades.
+                <br>
+                <span class="text-sm text-slate-500 italic">Insight Consultor:</span> Promover el uso equilibrado de la IA como asistente, no como reemplazo del pensamiento crítico y la experiencia humana.
+            </li>
+            <li>
+                <strong>Curva de Aprendizaje:</strong> Aunque la IA busca simplificar, la introducción de nuevas capacidades puede requerir que los usuarios y administradores se adapten a nuevas formas de trabajo.
+                <br>
+                <span class="text-sm text-slate-500 italic">Insight Consultor:</span> Ofrecer training y acompañamiento para asegurar una adopción exitosa y maximizar el valor.
+            </li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-slate-800 mb-4">6. OPORTUNIDADES DE VENTA Y RECOMENDACIONES</h3>
+
+        <ul class="list-disc pl-5 space-y-2 mb-8 text-slate-600">
+            <li>
+                <strong>Migraciones a Cloud:</strong> La mayoría de las innovaciones de IA están llegando primero a la nube. Este es un argumento muy fuerte para acelerar las migraciones.
+            </li>
+            <li>
+                <strong>Upselling/Cross-selling:</strong> Utilizar las nuevas capacidades de IA como un gancho para vender productos adyacentes (ej. JWM si ya usan Jira Software) o para pasar a planes premium que incluyan estas características.
+            </li>
+            <li>
+                <strong>Servicios de Consultoría de IA:</strong> Ofrecer servicios para ayudar a los clientes a integrar la IA de Atlassian en sus flujos de trabajo existentes, definir casos de uso y entrenar a sus equipos.
+            </li>
+            <li>
+                <strong>Auditorías de Madurez de IA:</strong> Realizar evaluaciones para entender dónde los clientes pueden beneficiarse más de la IA en su ecosistema Atlassian.
+            </li>
+            <li>
+                <strong>Capacitación y Adopción:</strong> Desarrollar programas de capacitación enfocados en las nuevas características de IA para maximizar la adopción y el ROI.
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const githubRepo = 'atlassian-radar';
+            const username = 'raspes';
+            const branch = 'main';
+            const selector = document.getElementById('report-selector');
+
+            fetch(`https://api.github.com/repos/${username}/${githubRepo}/git/trees/${branch}?recursive=1`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.tree) {
+                        const htmlFiles = data.tree
+                            .filter(file => file.path.endsWith('.html') && file.type === 'blob' && file.path !== 'index.html' && file.path !== '404.html')
+                            .map(file => file.path);
+
+                        // Sort files by name in descending order (most recent first)
+                        htmlFiles.sort((a, b) => b.localeCompare(a));
+
+                        selector.innerHTML = '<option value="" disabled selected>Selecciona un reporte...</option>'; // Reset and add default option
+
+                        htmlFiles.forEach(file => {
+                            const option = document.createElement('option');
+                            option.value = file;
+                            // Format the file name for display (e.g., "report-2023-10-26.html" -> "Reporte 26 Oct 2023")
+                            const fileName = file.replace('.html', '').replace(/-/g, ' ');
+                            const parts = fileName.split(' ');
+                            if (parts.length >= 4 && parts[0] === 'report') {
+                                const year = parts[1];
+                                const monthNum = parts[2];
+                                const day = parts[3];
+                                const date = new Date(year, monthNum - 1, day); // Month is 0-indexed
+                                const options = { year: 'numeric', month: 'short', day: 'numeric' };
+                                option.textContent = `Reporte ${date.toLocaleDateString('es-ES', options)}`;
+                            } else {
+                                option.textContent = fileName;
+                            }
+                            selector.appendChild(option);
+                        });
+
+                        selector.addEventListener('change', (event) => {
+                            const selectedFile = event.target.value;
+                            if (selectedFile) {
+                                window.location.href = `https://${username}.github.io/${githubRepo}/${selectedFile}`;
+                            }
+                        });
+                    } else {
+                        selector.innerHTML = '<option value="" disabled selected>Error al cargar reportes.</option>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching repository files:', error);
+                    selector.innerHTML = '<option value="" disabled selected>Error al cargar reportes.</option>';
+                });
+        });
+    </script>
+</body>
+</html>
